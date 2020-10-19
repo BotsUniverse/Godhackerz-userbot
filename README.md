@@ -18,7 +18,7 @@
 [![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://GodHackerz-Userbot.rohithaditya.repl.run)
 
 ## APP ID AND HASH 
-![CLICK HERE](my.telegram.org)
+[![CLICK HERE]><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>](my.telegram.org)
 
 ## THANKS TO [CharlieJin](https://t.me/Charlie_jin) For Guiding me 
 
