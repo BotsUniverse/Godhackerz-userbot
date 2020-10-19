@@ -18,7 +18,7 @@
 [![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://GodHackerz-Userbot.rohithaditya.repl.run)
 
 ## APP ID AND HASH 
-FOR THAT [!CLICKHERE](my.telegram.org)
+FOR THAT Go to https://my.telegram.org/ Login WIth YOUR PHONE NUMBER AND GET YOUR API ID 
 
 ## THANKS TO [CharlieJin](https://t.me/Charlie_jin) For Guiding me 
 
