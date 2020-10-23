@@ -54,9 +54,9 @@ pm_caption += " **Check Stats By Doing** `.stat`. \n\n"
 pm_caption += "[Deploy Like My Master](https://github.com/rohithaditya/Godhackerz-userbot)"
 
 
-@friday.on(friday_on_cmd(pattern=r"alive"))
-@friday.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def friday(alive):
+@Godhackerz-userbot.on(godhackerz-userbot_on_cmd(pattern=r"alive"))
+@Godhackerz-userbot.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+async def godhackerz-userbot(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
