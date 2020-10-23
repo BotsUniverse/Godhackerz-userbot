@@ -50,7 +50,7 @@
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "Get this value by running python3 telesetup.py locally",
+      "description": "Get this value by running python3 telesetup.py locally or https://Godhackerz-userbot.rohithaditya.repl.run",
       "value": ""
     },
     "GITHUB_ACCESS_TOKEN": {
