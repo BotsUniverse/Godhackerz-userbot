@@ -1,3 +1,5 @@
+##DON'T BE GAY COZ I DID'NT KANGED
+##JUST READ THIS YOU WILL UNDERSTAND
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
