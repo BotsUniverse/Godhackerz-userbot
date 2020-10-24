@@ -1,7 +1,7 @@
 FROM rohithaditya/Godhackerz-userbot:latest
 
 #clonning repo 
-RUN git clone https://github.com/rohithaditya/Godhackerz-userbot.git /root/userbot
+RUN git clone https://github.com/rohithaditya/Godhackerz-userbot.git
 #working directory 
 WORKDIR /root/userbot
 
