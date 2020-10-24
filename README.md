@@ -22,4 +22,4 @@ FOR THAT Go to https://my.telegram.org/ Login WIth YOUR PHONE NUMBER AND GET YOU
 
 ## THANKS TO [CharlieJin](https://t.me/Charlie_jin) For Guiding me 
 
-## GNU PUBLIC LICENCE 
+
