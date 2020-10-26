@@ -12,9 +12,10 @@
     "repository": "https://github.com/rohithaditya/Godhackerz-userbot.git",
     "website": "https://github.com/rohithaditya/Godhackerz-userbot/tree/main",
     "success_url": "https://github.com/rohithaditya/Godhackerz-userbot",
-  "env": {
-    "ENV": {
-      "description": "Setting this to ANYTHING will enable heroku.",
+    "stack": "container",
+    "env": {
+      "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
     },
     "TEMP_DOWNLOAD_DIRECTORY": {
