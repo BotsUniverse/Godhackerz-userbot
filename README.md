@@ -12,7 +12,7 @@
 
 
 ### Host YOUR DREAM USERBOT  In Heroku
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/rohithaditya/Godhackerz-userbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rohithaditya/Godhackerz-userbot/tree/main)
 
 ## For Your STRING SESSION 
 [![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://GodHackerz-Userbot.rohithaditya.repl.run)
