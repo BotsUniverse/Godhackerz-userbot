@@ -11,7 +11,7 @@
   ],
     "repository": "https://github.com/rohithaditya/Godhackerz-userbot.git",
     "website": "https://github.com/rohithaditya/Godhackerz-userbot/tree/main",
-    "success_url": "https://github.com/rohithaditya/Godhackerz-userbot",
+    "success_url": "https://github.com/rohithaditya/Godhackerz-userbot/blob/main/README.md",
     "stack": "container",
     "env": {
       "ENV": {
@@ -41,9 +41,7 @@
       "required": false
     },
     "ALIVE_NAME": {
-
       "description": "Enter your Telegram Username Ex. @YourUsername",
-
       "value": "@rohithaditya"
     },
     "API_HASH": {
