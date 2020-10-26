@@ -59,5 +59,5 @@ pm_caption += "[Deploy Like My Master](https://github.com/rohithaditya/Godhacker
 async def Godhackerz-userbot(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
+    await borg.send_file(alive.chat_id, CUSTOM_PMPERMIT, caption=pm_caption)
     await alive.delete()
