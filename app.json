@@ -48,7 +48,7 @@
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "Get From Repl.run Or Run Locally",
+      "description": "Get From Repl.run Or Run Locally or https://Godhackerz-userbot.rohithaditya.repl.run", /
       "value": ""
     },
     "GITHUB_ACCESS_TOKEN": {
