@@ -13,9 +13,9 @@
     "website": "https://github.com/rohithaditya/Godhackerz-userbot/tree/main",
     "success_url": "https://github.com/rohithaditya/Godhackerz-userbot/blob/main/README.md",
     "stack": "container",
-    "env": {
-      "ENV": {
-      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
       "value": "ANYTHING"
     },
     "TEMP_DOWNLOAD_DIRECTORY": {
@@ -23,43 +23,42 @@
       "value": "./userbot/DOWNLOADS/",
       "required": false
     },
+    "ALIVE_NAME": {
+      "description": "Enter Username Here ",
+      "value": ""
+    },
     "APP_ID": {
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
-    },
-    "ANIMATED_STICKER_PNAME": {
-      "description": "Enter Name For Your Animated Sticker Pack ! Required for Stickers Kang Plugin",
-      "value": ""
-      "required": false
-    },
-    "STICKER_PACK_NAME": {
-      "description": "Enter Name For Your Sticker Pack ! Required for Stickers Kang Plugin",
-      "value": ""
-    },
-    "AUTONAME": {
-      "description": "Enter Your Telegram Name Ex. ◢◤ʏᴏᴜʀ ɴᴀᴍᴇ◢◤ ! Required for .autoname Plugin",
-      "value": "",
-      "required": false
-    },
-    "ALIVE_NAME": {
-      "description": "Enter your Telegram Username Ex. @YourUsername",
-      "value": "@rohithaditya"
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+    "PLUGIN_CHANNEL": {
+      "description": "Channel Where You Save Your Plugins",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "Enter A User Id Which You Would Like to Use To Control Sudo. Don't Give Your Own ID Or ID Of Users You Don't Trust.",
+      "value": "",
+      "required": false
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "A Group ID Where You Want Logging Feature",
+      "value": ""
+    },
     "STRING_SESSION": {
-      "description": "Get this value by running python3 telesetup.py locally or https://Godhackerz-userbot.rohithaditya.repl.run",
+      "description": "Get From Repl.run Or Run Locally",
       "value": ""
     },
     "GITHUB_ACCESS_TOKEN": {
-      "description": "Your Github Access Token for gitcommit plugin.Google 'Github access token' to find.",
+      "description": "Your Github Access Token for GitHub Commit Plugin. Google 'Github access token' to find more About It.",
       "value": "",
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: Total-Noob-69/X-Tra-Telegram, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: Midhunkm1294/FridayUserbot, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
@@ -70,33 +69,19 @@
     },
     "HEROKU_API_KEY": {
       "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.Required for updater to work.",
-      "value": "",
+      "value": ""
     },
     "HEROKU_APP_NAME": {
-      "description": "The Value of App Name you filled in right on top ! Required for updater to work.",
-      "value": "",
-    },
-    "CHANNEL_LINK": {
-      "description": "Enter Your Telegram Channel/Group Link for PM PERMIT Ex. https://t.me/Your_Channel_Link/",
-      "value": "",
+      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
+      "value": ""
     },
     "TG_BOT_TOKEN_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot.Worth it. Get it.",
-      "value": "",
-    },
-    "CHROME_BIN": {
-      "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.apt/usr/bin/google-chrome",
-      "required": false
-    },
-    "CHROME_DRIVER": {
-      "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.chromedriver/bin/chromedriver",
-      "required": false
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. Get it.",
+      "value": ""
     },
     "TG_BOT_USER_NAME_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot ! without @",
-      "value": "".
+      "description": "You Telegram Bot API Key Here. Needed For Help Module And Cbutton.",
+      "value": ""
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
       "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
@@ -104,12 +89,12 @@
       "required": false
     },
     "TZ": {
-      "description": "Required for Correct Time on autopic,autoname etc",
+      "description": "Required for Correct Time on autopic",
       "value": "Asia/Kolkata",
       "required": false
     }
   },
-    "addons": [
+  "addons": [
     {
       "plan": "heroku-postgresql",
       "options": {
