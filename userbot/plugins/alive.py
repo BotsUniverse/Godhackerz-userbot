@@ -46,7 +46,7 @@ pm_caption += f" **Uptime** : `{uptime}` \n"
 pm_caption += " **Database Status:**  `Functional`\n"
 pm_caption += " **Current Branch** : `master`\n"
 pm_caption += f" **Version** : `{currentversion}`\n"
-pm_caption += f" **My Owner ** : {DEFAULTUSER} \n"
+pm_caption += f" **My Master ** : {DEFAULTUSER} \n"
 pm_caption += " **Heroku Database** : `All CORRECT`\n\n"
 pm_caption += " **License** : [GNU General Public License v3.0](github.com/rohithaditya/Godhackerz-userbot/blob/master/LICENSE)\n"
 pm_caption += " **Copyright** : By [Rohithaditya@Github](GitHub.com/rohithaditya)\n"
@@ -54,9 +54,9 @@ pm_caption += " **Check Stats By Doing** `.stat`. \n\n"
 pm_caption += "[Deploy Like My Master](https://github.com/rohithaditya/Godhackerz-userbot)"
 
 
-@Godhackerz-userbot.on(godhackerz-userbot_on_cmd(pattern=r"alive"))
-@Godhackerz-userbot.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def godhackerz-userbot(alive):
+@borg.on(admin_cmd(pattern=r"alive"))
+@borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+async def friday(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
