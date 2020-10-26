@@ -56,7 +56,7 @@ pm_caption += "[Deploy Like My Master](https://github.com/rohithaditya/Godhacker
 
 @borg.on(admin_cmd(pattern=r"alive"))
 @borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def friday(alive):
+async def Godhacketz-userbot(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
