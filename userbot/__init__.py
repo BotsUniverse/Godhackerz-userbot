@@ -13,7 +13,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-
+CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT")
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
