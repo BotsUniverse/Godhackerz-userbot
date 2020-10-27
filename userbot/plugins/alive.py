@@ -1,63 +1,16 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-# CREDITS: @WhySooSerious, @Sur_vivor
-import time
-from uniborg.util import friday_on_cmd, sudo_cmd
+import asyncio
+from telethon import events
+from telethon.tl.types import ChannelParticipantsAdmins
+from platform import uname
 from userbot import ALIVE_NAME
-from datetime import datetime
-from userbot import Lastupdate
-from userbot.plugins import currentversion
+from userbot.utils import admin_cmd
 
-#Functions
-def get_readable_time(seconds: int) -> str:
-    count = 0
-    ping_time = ""
-    time_list = []
-    time_suffix_list = ["s", "m", "h", "days"]
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
-    while count < 4:
-        count += 1
-        if count < 3:
-            remainder, result = divmod(seconds, 60)
-        else:
-            remainder, result = divmod(seconds, 24)
-        if seconds == 0 and remainder == 0:
-            break
-        time_list.append(int(result))
-        seconds = int(remainder)
-
-    for x in range(len(time_list)):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
-    if len(time_list) == 4:
-        ping_time += time_list.pop() + ", "
-
-    time_list.reverse()
-    ping_time += ":".join(time_list)
-
-    return ping_time
-
-uptime = get_readable_time((time.time() - Lastupdate))
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
-PM_IMG = "https://telegra.ph/file/b8324f81fb4176ff8494d.jpg"
-pm_caption = " **GodHackerz:** `Working Correctly`\n\n"
-pm_caption += " **SYSTEMS STATS**\n"
-pm_caption += " **Telethon Version:** `1.15.0` \n"
-pm_caption += " **Python:** `3.7.4` \n"
-pm_caption += f" **Uptime** : `{uptime}` \n"
-pm_caption += " **Database Status:**  `Functional`\n"
-pm_caption += " **Current Branch** : `master`\n"
-pm_caption += f" **Version** : `{currentversion}`\n"
-pm_caption += f" **My Master ** : {DEFAULTUSER} \n"
-pm_caption += " **Heroku Database** : `All CORRECT`\n\n"
-pm_caption += " **License** : [GNU General Public License v3.0](github.com/rohithaditya/Godhackerz-userbot/blob/master/LICENSE)\n"
-pm_caption += " **Copyright** : By [Rohithaditya@Github](GitHub.com/rohithaditya)\n"
-pm_caption += " **Check Stats By Doing** `.stat`. \n\n"
-pm_caption += "[Deploy Like My Master](https://github.com/rohithaditya/Godhackerz-userbot)"
-
-
-@borg.on(admin_cmd(pattern=r"alive"))
-@borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def Godhackerzuserbot(alive):
-    await alive.get_chat()
+@command(outgoing=True, pattern="^.alive$")
+async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id, CUSTOM_PMPERMIT, caption=pm_caption)
-    await alive.delete()
+    await alive.edit("`░█─░█ █▀▀ █── █── █▀▀█ \n░█▀▀█ █▀▀ █── █── █──█ \n░█─░█ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ \n\nYes Sir ! I'm Alive\n\nTelethon version: 6.9.0\nPython: 3.7.3\n\n`"
+                    f"`My Master`: {DEFAULTUSER}\n"
+                     "Join [Channel](https://t.me/Godhackerzuserbot) For Latest Updates")
