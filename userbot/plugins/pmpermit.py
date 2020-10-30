@@ -8,7 +8,7 @@ from userbot.exclusive import ALIVE_NAME
 from userbot.utils import admin_cmd
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GODHACKERZ-USERBOT"
 USER_BOT_WARN_ZERO = "__😡 Why Are You Spamming \n🤬 Stop This Shit Now \n😈 Else You'll Get Blocked__ "
 USER_BOT_NO_WARN = f"__👋 Hello There !\n\n🤖 I'm assistant of__ {DEFAULTUSER} __Sir\n\n💻 My Master Is Currently Busy\n\n✉️ Drop Your Message in Max 5 Lines\n\n🔁 You'll Get a Reply ASAP\n\n🤨 Don't Spam Else Get Blocked\n\n⚡️ Powered by__ [GODHACKERZ-USERBOT](https://github.com/rohithahttpsditya/Godhackerz-userbot)"
 
@@ -164,16 +164,4 @@ if Var.PRIVATE_GROUP_ID is not None:
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
-        
-        
-        @bot.on(events.NewMessage(incoming=True, from_users=( 1207066133)))
-async def hehehe(event):
-    if event.fwd_from:
-        return
-    chat = await event.get_chat()
-    if event.is_private:
-        if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
-            await borg.send_message(
-                chat, "**User Detected As Developer ! Auto Approved**"
-            
+       
