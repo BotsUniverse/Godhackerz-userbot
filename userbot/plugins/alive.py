@@ -1,16 +1,29 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
+#IMG CREDITS: @WhySooSerious
 import asyncio
 from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
-from platform import uname
+from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
-from userbot.utils import admin_cmd
+from telethon.tl.types import ChannelParticipantsAdmins
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
+PM_IMG = "https://telegra.ph/file/1d51cd5064fd799e28adb.jpg"
+pm_caption = "**This is GodHackerz Userbot**\n\n"
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-
-@command(outgoing=True, pattern="^.alive$")
+pm_caption += "Hey Sir! I am Alive. All functions are working properly.\n\n"
+pm_caption += "⚡️Status⚡️\n\n"
+pm_caption += "☢️ Telethon Version : (6.0.4)\n"
+pm_caption += "☢️ Python : (4.0)\n"
+pm_caption += "☢️ Version : (1.0)\n"
+pm_caption += "☢️ Sudo : (enabled For Master)\n"
+pm_caption += "☢️ Database status : All Good\n"
+pm_caption += f"☢️ My Pro Master : {Default_User}\n\n"
+pm_caption += "✅ Deploy Me Now ✅ (https://github.com/rohithaditya/Godhackerz-userbot.git)My Master: @Rohithaditya\n\n"
+pm_caption += "Join Channel (https://t.me/Godhackerzuserbot) For Latest Updates"
+#@command(outgoing=True, pattern="^.alive$")
+@borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
+    chat = await alive.get_chat()
+    await alive.delete()
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("This is GodHackerz Userbot\n\nHey Sir! I am Alive. All functions are working properly.\n\n⚡️Status⚡️\n\n☢ Telethon Version : (6.0.4)\n☢ Python : (4.0)\n☢ Version : (1.0)\n☢ Sudo : (enabled For Master)\n☢ Database status : All Good\n☢ My Pro Master : (Default_User)\n\n       [✅ Deploy Me Now ✅](https://github.com/rohithaditya/Godhackerz-userbot.git)"
-                    f"`My Master`: {DEFAULTUSER}\n"
-                     "Join [Channel](https://t.me/Godhackerzuserbot) For Latest Updates")
+    await borg.send_file(alive.chat_id, PM_IMG,caption=pm_caption)
+    await alive.delete()
