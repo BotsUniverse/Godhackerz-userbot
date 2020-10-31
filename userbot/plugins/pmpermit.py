@@ -6,7 +6,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot.exclusive import ALIVE_NAME
 from userbot.utils import admin_cmd
-PMPERMIT_PIC = https://telegra.ph/file/b8324f81fb4176ff8494d.jpg
+PMPERMIT_PIC = "https://telegra.ph/file/b8324f81fb4176ff8494d.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GODHACKERZ-USERBOT"
