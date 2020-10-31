@@ -43,7 +43,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.delete()
 
 
-    @command(pattern="^.block$")
+    @command(pattern="^.b$")
     async def approve_p_m(event):
         if event.fwd_from:
             return
