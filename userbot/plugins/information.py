@@ -9,7 +9,7 @@ from telethon.utils import get_input_location
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("info ?(.*)"))
+@borg.on(admin_cmd(".whoisthisnoob?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,7 +44,7 @@ async def _(event):
     except Exception as e:
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """<b>Extracted Userdata From Jayu's DATABASE<b>
+    caption = """<b>Extracted Userdata From GODHACKERZ USERBOT's DATABASE<b>
 <b>ID</b>: <code>{}</code>
 <b>Person Name</b>: <a href='tg://user?id={}'>{}</a>
 <b>Last Name</b>:<code>{}</code>
