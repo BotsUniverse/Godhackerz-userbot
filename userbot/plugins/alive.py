@@ -11,6 +11,6 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("This is GodHackerz Userbot\n\nHey Sir! I am Alive. All functions are working properly.\n\n⚡️Status⚡️\n\n☢ Telethon Version : (version)\n☢ Python : (version)\n☢ Version : (version)\n☢ Sudo : (enabled/disabled)\n☢ Database status : All Good\n☢ My Pro Master : (Default_User)\n\n       [✅ Deploy Me Now ✅](https://github.com/rohithaditya/Godhackerz-userbot.git)"
+    await alive.edit("This is GodHackerz Userbot\n\nHey Sir! I am Alive. All functions are working properly.\n\n⚡️Status⚡️\n\n☢ Telethon Version : (6.0.4)\n☢ Python : (4.0)\n☢ Version : (1.0)\n☢ Sudo : (enabled For Master)\n☢ Database status : All Good\n☢ My Pro Master : (Default_User)\n\n       [✅ Deploy Me Now ✅](https://github.com/rohithaditya/Godhackerz-userbot.git)"
                     f"`My Master`: {DEFAULTUSER}\n"
                      "Join [Channel](https://t.me/Godhackerzuserbot) For Latest Updates")
