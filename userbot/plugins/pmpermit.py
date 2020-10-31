@@ -6,21 +6,27 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot.exclusive import ALIVE_NAME
 from userbot.utils import admin_cmd
+PMPERMIT_PIC = https://telegra.ph/file/b8324f81fb4176ff8494d.jpg
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GODHACKERZ-USERBOT"
-USER_BOT_WARN_ZERO = "__😡 Why Are You Spamming \n🤬 Stop This Shit Now \n😈 Else You'll Get Blocked__ "
-USER_BOT_NO_WARN = f"__👋 Hello There !\n\n🤖 I'm assistant of__ {DEFAULTUSER} __Sir\n\n💻 My Master Is Currently Busy\n\n✉️ Drop Your Message in Max 5 Lines\n\n🔁 You'll Get a Reply ASAP\n\n🤨 Don't Spam Else Get Blocked\n\n⚡️ Powered by__ [GODHACKERZ-USERBOT](https://github.com/rohithahttpsditya/Godhackerz-userbot)"
-
+USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By Userbot"
+USER_BOT_NO_WARN = (
+    "**Hello,This is GodHackerz-Userbot Protection Service ⚠️**\n\n"
+    f"`My Master {DEFAULTUSER} is Busy Right Now !`"
+    "__You May Leave A Request And Wait Till He Approves You.__ \n\n"
+    "**Now You Are In Trouble. So Send** `/start` **And Register A Request** \n\n"
+    f"**{PMPERMIT_PIC}**"
+)
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @command(pattern="^.a ?(.*)")
-    async def approve_p_m(event):
+
+    @command(pattern="^.a$")
+    async def block(event):
         if event.fwd_from:
-           return
+            return
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
         firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
             if not pmpermit_sql.is_approved(chat.id):
@@ -29,27 +35,29 @@ if Var.PRIVATE_GROUP_ID is not None:
                 if chat.id in PREV_REPLY_MESSAGE:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
-                pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved to pm [{}](tg://user?id={})".format(firstname, chat.id))
-                await asyncio.sleep(10)
+                pmpermit_sql.approve(chat.id, "Approved This Noob")
+                await event.edit(
+                    "Approved to pm [{}](tg://user?id={})".format(firstname, chat.id)
+                )
+                await asyncio.sleep(3)
                 await event.delete()
 
 
-    @command(pattern="^.b ?(.*)")
+    @command(pattern="^.block$")
     async def approve_p_m(event):
         if event.fwd_from:
             return
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
         firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" ╔═╗─╔╗╔╗────╔╗ \n║║╚╗║║║║────║║ \n║╔╗╚╝╠╣║╔╦══╣║ \n║║╚╗║╠╣╚╝╣╔╗║║ \n║║─║║║║╔╗╣╔╗║╚╗ \n╚╝─╚═╩╩╝╚╩╝╚╩═╝ \n\nNow You Can't Message Me..[{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit(
+                    "Blocked [{}](tg://user?id={})".format(firstname, chat.id)
+                )
                 await asyncio.sleep(3)
-                await event.client(functions.contacts.BlockRequest(chat.id))
-
+                await event.delete()
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
