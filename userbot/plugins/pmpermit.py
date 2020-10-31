@@ -135,7 +135,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             # pm permit
             await (chat_id, event)
 
-    async def (chat_id, event):
+    async def pmpermit_action(chat_id, event):
         if chat_id not in PM_WARNS:
             PM_WARNS.update({chat_id: 0})
         if PM_WARNS[chat_id] == 3:
