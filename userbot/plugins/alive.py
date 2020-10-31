@@ -16,7 +16,7 @@ pm_caption += "☢️ Python : (4.0)\n"
 pm_caption += "☢️ Version : (1.0)\n"
 pm_caption += "☢️ Sudo : (enabled For Master)\n"
 pm_caption += "☢️ Database status : All Good\n"
-pm_caption += f"☢️ My Pro Master : {Default_User}\n\n"
+pm_caption += f"☢️ My Pro Master : {DEFAULTUSER}\n\n"
 pm_caption += "✅ Deploy Me Now ✅ (https://github.com/rohithaditya/Godhackerz-userbot.git)My Master: @Rohithaditya\n\n"
 pm_caption += "Join Channel (https://t.me/Godhackerzuserbot) For Latest Updates"
 #@command(outgoing=True, pattern="^.alive$")
