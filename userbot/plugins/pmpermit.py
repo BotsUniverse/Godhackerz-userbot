@@ -6,7 +6,7 @@ from telethon import events
 from telethon import functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-import userbot.modules.sql_helper.pmpermit_sql as pmpermit_sql
+import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 from userbot import CUSTOM_PMPERMIT
 from userbot.Configs import Config
