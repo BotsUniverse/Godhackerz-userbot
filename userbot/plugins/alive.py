@@ -1,5 +1,5 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-#IMG CREDITS: @WhySooSerious
+#IMG CREDITS: @reeshu_xd
 import asyncio
 from telethon import events
 from uniborg.util import admin_cmd
@@ -17,8 +17,10 @@ pm_caption += "☢️ Version : (1.0)\n"
 pm_caption += "☢️ Sudo : (enabled For Master)\n"
 pm_caption += "☢️ Database status : All Good\n"
 pm_caption += f"☢️ My Pro Master : {DEFAULTUSER}\n\n"
-pm_caption += "✅ Deploy Me Now ✅ (https://github.com/rohithaditya/Godhackerz-userbot.git)\n\n"[My Creator](t.me/rohithaditya)\n\n"
-pm_caption += "Join Channel (https://t.me/Godhackerzuserbot) For Latest Updates"
+pm_caption += "✅ Deploy Me Now ✅ (https://github.com/rohithaditya/Godhackerz-userbot.git)\n\n"
+pm_caption += "[My Creator](t.me/rohithaditya)\n\n"
+pm_caption += "Join [
+Channel](https://t.me/Godhackerzuserbot) For Latest Updates"
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
