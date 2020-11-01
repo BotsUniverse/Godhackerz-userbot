@@ -1,23 +1,54 @@
+#    GodHackerz - UserBot
+#    Copyright ©2020 GodHackerz-UserBot
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import asyncio
 import io
 import os
-import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
+
+from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
-from telethon import events, errors, functions, types
-from userbot.exclusive import ALIVE_NAME
-from userbot.utils import admin_cmd
-PMPERMIT_PIC = "https://telegra.ph/file/b8324f81fb4176ff8494d.jpg"
+
+import telebot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
+from telebot import ALIVE_NAME, CUSTOM_PMPERMIT, bot
+from telebot.utils import admin_cmd
+
+PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+PM_PIC = (
+    PMPERMIT_PIC
+    if PMPERMIT_PIC
+    else "https://telegra.ph/file/1d51cd5064fd799e28adb.jpg"
+)
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GODHACKERZ-USERBOT"
-USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By Userbot"
-USER_BOT_NO_WARN = (
-    "**Hello,This is GodHackerz-Userbot Protection Service ⚠️**\n\n"
-    f"`My Master {DEFAULTUSER} is Busy Right Now !`"
-    "__You May Leave A Request And Wait Till He Approves You.__ \n\n"
-    "**Now You Are In Trouble. So Send** `/start` **And Register A Request** \n\n"
-    f"**{PMPERMIT_PIC}**"
+myid = bot.uid
+MESAG = (
+    str(CUSTOM_PMPERMIT)
+    if CUSTOM_PMPERMIT
+    else "`GODHACKERZ USERBOT PM security! Please wait for my [Master] to approve you. 😊"
 )
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
+USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
+USER_BOT_NO_WARN = (
+    "**inbox 🔒Security ~ GodHackerz-UserBot**\n\nNice to see you here, but  "
+    "[{}](tg://user?id={}) is currently unavailable.\nThis is an Usetbot message.\n\n"
+    "{}\n\n**You have** `{}/{}` **warnings..."
+    "SEND `/start` So it Will Be easy for my Master To Know You.\n\n"
+    
+)
+
 
 if Var.PRIVATE_GROUP_ID is not None:
 
@@ -59,7 +90,11 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @command(pattern="^.listapproved")
+
+# Approve outgoing
+
+
+@command(pattern="^.listapproved")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -172,4 +207,5 @@ if Var.PRIVATE_GROUP_ID is not None:
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
-       
+
+# © GodHaackerz-Userbot
