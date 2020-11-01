@@ -107,4 +107,6 @@ async def _(event):
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
                         await event.client(functions.contacts.BlockRequest(chat_id))
-© GodHackerz-UserBot © GodHackerz-UserBot 
+# © GodHackerz-UserBot 
+# Don't Edit Anything
+# If You Edit This {Not For My Contributors} You Will Be Gay
