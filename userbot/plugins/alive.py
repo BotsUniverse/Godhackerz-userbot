@@ -19,8 +19,7 @@ pm_caption += "☢️ Database status : All Good\n"
 pm_caption += f"☢️ My Pro Master : {DEFAULTUSER}\n\n"
 pm_caption += "✅ Deploy Me Now ✅ (https://github.com/rohithaditya/Godhackerz-userbot.git)\n\n"
 pm_caption += "[My Creator](t.me/rohithaditya)\n\n"
-pm_caption += "Join [
-Channel](https://t.me/Godhackerzuserbot) For Latest Updates"
+pm_caption += "Join [Channel](https://t.me/Godhackerzuserbot) For Latest Updates"
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
