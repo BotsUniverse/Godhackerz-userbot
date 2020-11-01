@@ -75,7 +75,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
     @command(pattern="^.b$")
-    async def approve_p_m(event):
+    async def approve_pm(event):
         if event.fwd_from:
             return
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
