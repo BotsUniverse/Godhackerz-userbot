@@ -176,22 +176,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
             the_message += f"Message Counts: {PM_WARNS[chat_id]}\n"
             # the_message += f"Media: {message_media}"
-            try:
-                await event.client.send_message(
-                    entity=Var.PRIVATE_GROUP_ID,
-                    message=the_message,
-                    # reply_to=,
-                    # parse_mode="html",
-                    link_preview=False,
-                    # file=message_media,
-                    silent=True,
-                )
                 return
-            except:
-                return
-        r = await event.client.send_file(
-            event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
-            PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
