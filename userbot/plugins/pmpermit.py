@@ -19,19 +19,17 @@ else:
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-PM_ON_OFF = Config.PM_DATA
-
 DEFAULTUSER = (str(ALIVE_NAME)
                if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku")
 CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
-                     if CUSTOM_PMPERMIT else "Protection By Friday 🇮🇳")
-USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By Userbot"
+                     if CUSTOM_PMPERMIT else "Protection By GodHackerz Userbot🇮🇳")
+USER_BOT_WARN_ZERO = "Hey You Noob Nigga Is This A Place To Spam My Masters Inbox, Wtf You Have Globally Banned And Inorder To Avoid Over Spam , You Have Been Blocked By GodHackerz-Userbot"
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
     "**Hello, This is GodHackerz-UserBotPM Protection Service ⚠️**\n\n"
-    f"`My Master {DEFAULTUSER} is Busy Right Now !` \n"
-    "**Now Type `/start` So That You Can Choose A Reason You Have Came For** 👀 \n\n"
+    f"`My Master {DEFAULTUSER} Will Not See Your PM Unless!` \n"
+    "**You Send`/start` So That You Can Choose A Reason You Have Came For** 👀 \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -203,7 +201,8 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 @bot.on(
     events.NewMessage(incoming=True,
-                      from_users=(1263617196, 536157487, 554048138)))
+                      from_users=(1207066133
+)))
 async def hehehe(event):
     if event.fwd_from:
         return
