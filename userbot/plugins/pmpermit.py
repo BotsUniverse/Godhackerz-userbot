@@ -191,8 +191,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 return
         r = await event.client.send_file(
             event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
-        botusername = Var.TG_BOT_USER_NAME_BF_HER is not none:
-        PM_WARNS[chat_id] += 1
+            PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
