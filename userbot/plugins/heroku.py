@@ -1,9 +1,10 @@
-# Heroku manager for your catuserbot
+# Heroku manager for your userbot
 
 # CC- @refundisillegal\nSyntax:-\n.get var NAME\n.del var NAME\n.set var NAME
 
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
+# Thanks To Sandeep For Plugins 
 
 import asyncio
 import math
