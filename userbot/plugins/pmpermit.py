@@ -192,9 +192,6 @@ if Var.PRIVATE_GROUP_ID is not None:
         r = await event.client.send_file(
             event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
         botusername = Var.TG_BOT_USER_NAME_BF_HER
-        noob = "dontpm"
-        tap = await bot.inline_query(botusername, USER_BOT_NO_WARN)
-        sed = await tap[0].click(event.chat_id)
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
