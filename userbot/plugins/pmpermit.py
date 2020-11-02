@@ -183,6 +183,10 @@ if Var.PRIVATE_GROUP_ID is not None:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
 
+         r = await event.client.send_file(
+            event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
+        )
+
 
 @bot.on(
     events.NewMessage(incoming=True,
