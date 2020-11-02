@@ -178,6 +178,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             # the_message += f"Media: {message_media}"
 
                 return
+
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
