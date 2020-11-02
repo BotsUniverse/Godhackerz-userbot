@@ -154,7 +154,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             return
 
-        if PM_ON_OFF == "DISABLE":
+        if any([x in event.raw_text for x in ("/start", "1", "2", "3", "4", "5")]):
             return
 
         if not pmpermit_sql.is_approved(chat_id):
