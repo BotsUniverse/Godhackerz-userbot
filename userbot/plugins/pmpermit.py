@@ -16,6 +16,7 @@ if PMPERMIT_PIC is None:
 else:
     WARN_PIC = PMPERMIT_PIC
 
+Custom = **Protection By GodHackerz Userbot**
 import asyncio
 import io
 import os
@@ -28,7 +29,7 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "__😡 Why Are You Spamming \n🤬 Stop This Shit Now \n😈 Else You'll Get Blocked__ "
-USER_BOT_NO_WARN = f"__👋 Hello There !\n\n🤖 I'm assistant of__ {DEFAULTUSER} __Sir\n\n💻 My Master Is Currently Busy\n\n✉️ send `/start` to Choose what you have came for \n\n🔁 You'll Get a Reply ASAP if you send `/start` **YOU NIGGA**\n\n🤨 Don't Spam Else Get Blocked\n\n❤️ Join My USERBOT SUPPORT GROUP [GODHACKERZ_USERBOT](https://t.me/Godhackerz-Userbot)\n\n__⚡️ Powered by__ [GODHACKERZ_USERBOTBot](-https://github.com/rohithaditya/Godhackerz-userbot.git)/n/n**{WARN_PIC}**"
+USER_BOT_NO_WARN = f"__👋 Hello There !\n\n🤖 I'm assistant of__ {DEFAULTUSER} __Sir\n\n💻 My Master Is Currently Busy\n\n✉️ send `/start` to Choose what you have came for \n\n🥳 You'll Get a Reply ASAP if you send `/start` **YOU NIGGA**\n\n🤨 Don't Spam Else Get Blocked\n\n❤️ Join My USERBOT SUPPORT GROUP [GODHACKERZ_USERBOT](https://t.me/Godhackerzuserbot)\n\n⚡️ Powered by__ [👩‍💻GODHACKERZ_USERBOT👨‍💻](https://github.com/rohithaditya/Godhackerz-userbot.git)/n/n**{Custom}**"
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -64,10 +65,50 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" GET LOST YOU NOOB\n\nNow You Can't Message Me..\n\nANOTHER ONE BITES BLOCKED [{}](tg://user?id={})".format(firstname, chat.id)) 
+                await event.edit(" GET LOST \n\nNow You Can't Message Me.😈😈😈😈.\n\nANOTHER ONE BITES BLOCKED 😈😈😈😈[{}](tg://user?id={})".format(firstname, chat.id)) 
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
+    
+     @command(pattern="^.da ")
+         async def disapprove_p_m(event):
+        if event.fwd_from:
+            return
+        if event.is_private:
+            replied_user = await event.client(GetFullUserRequest(event.chat_id))
+            firstname = replied_user.user.first_name
+            chat = await event.get_chat()
+            if chat.id in PM_START:
+                PM_START.remove(chat.id)
+            if pmpermit_sql.is_approved(chat.id):
+                pmpermit_sql.disapprove(chat.id)
+                await event.edit(
+                    "disapproved to pm [{}](tg://user?id={}) Master ".format(firstname, chat.id)
+                )
+            else:
+                await event.edit(
+                    "[{}](tg://user?id={}) is not yet approved".format(
+                        firstname, chat.id
+                    )
+                )
+            return
+        if event.reply_to_msg_id:
+            reply = await event.get_reply_message()
+            chat = await event.client.get_entity(reply.sender_id)
+            firstname = str(chat.first_name)
+            if chat.id in PM_START:
+                PM_START.remove(chat.id)
+            if pmpermit_sql.is_approved(chat.id):
+                pmpermit_sql.disapprove(chat.id)
+                await event.edit(
+                    "disapproved to pm [{}](tg://user?id={})".format(firstname, chat.id)
+                )
+            else:
+                await event.edit(
+                    "[{}](tg://user?id={}) is not yet approved".format(
+                        firstname, chat.id
+                    )
+                )
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
