@@ -16,7 +16,7 @@ if PMPERMIT_PIC is None:
 else:
     WARN_PIC = PMPERMIT_PIC
 
-Custom = **Protection By GodHackerz Userbot**
+Custom = "**Protection By GodHackerz Userbot**"
 import asyncio
 import io
 import os
