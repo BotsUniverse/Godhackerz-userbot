@@ -190,7 +190,6 @@ if Var.PRIVATE_GROUP_ID is not None:
                 return
             except:
                 return
-                  return
         r = await event.client.send_file(
             event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
         )
