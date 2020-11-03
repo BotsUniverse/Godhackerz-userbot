@@ -48,7 +48,7 @@
       "value": ""
     },
     "PRIVATE_GROUP_BOT_API_ID": { 
-       "description": Just Copy Paste PRIVATE_GROUP_ID FOR AFK PLUGIN", 
+       "description": "Just Copy Paste PRIVATE_GROUP_ID FOR AFK PLUGIN", 
        "value": ""
      }, 
     "STRING_SESSION": {
