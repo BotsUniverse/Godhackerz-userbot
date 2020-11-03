@@ -54,7 +54,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.delete()
 
 
-    @command(pattern="^.b ?(.*)")
+    @command(pattern="^.b?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -70,7 +70,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
     
-     @command(pattern="^.da ?(.*)")
+     @command(pattern="^.da?(.*)")
          async def disapprove_p_m(event):
         if event.fwd_from:
             return
