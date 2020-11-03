@@ -19,7 +19,7 @@ PREV_REPLY_MESSAGE = {}
 
 @command(pattern=r"\/start", incoming=True)
 async def _(event):
-    chat_id = event.from_id
+    chat_id = event.sender_id
     event.sender_id
     if not pmpermit_sql.is_approved(chat_id):
         chat = await event.get_chat()
@@ -44,7 +44,7 @@ async def _(event):
             LWARN = "**This is your last warning. DO NOT send another message else you will be blocked and reported. Keep patience. My master will respond you ASAP.**\n__Use__ `/start` __to go back to the main menu.__"
         async with borg.conversation(chat) as conv:
             await borg.send_message(chat, SADLYF)
-            chat_id = event.from_id
+            chat_id = event.sender_id
             response = await conv.get_response(chat)
             y = response.text
             if y == "1":
