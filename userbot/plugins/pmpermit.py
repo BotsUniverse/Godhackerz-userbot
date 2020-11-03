@@ -83,7 +83,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                  await event.edit(
                    "Disapproved User [{}](tg://user?id={}) Master".format(firstname, chat.id)
                 )
-                await event.delete()
+                
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
