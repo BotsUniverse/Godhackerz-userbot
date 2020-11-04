@@ -2,7 +2,7 @@
 # We Are Not Responsible If Userbot Got Crashed 
 # © @Godhackerzuserbot
 
-from userbot.utils import sudo_cmd, admin_cmd, edit_or_reply, load_module, remove_plugin
+from userbot.utils import admin_cmd, edit_or_reply, load_module, remove_plugin
 import asyncio
 import os
 from datetime import datetime
