@@ -1,5 +1,6 @@
 """Get Telegram Profile Picture and other information
-Syntax: .whoisthisnoob @username"""
+Syntax: .Extract @username
+© @Godhackerzuserbot """
 
 import html
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -9,7 +10,7 @@ from telethon.utils import get_input_location
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("whoisthisnoob?(.*)"))
+@borg.on(admin_cmd("extract?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,7 +45,7 @@ async def _(event):
     except Exception as e:
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """<b>Extracted Userdata From GODHACKERZ USERBOT's DATABASE<b>
+    caption = """<b>Extracted Userdata From GODHACKERZ USERBOT's DATABASE Master <b>
 <b>ID</b>: <code>{}</code>
 <b>Person Name</b>: <a href='tg://user?id={}'>{}</a>
 <b>Last Name</b>:<code>{}</code>
@@ -89,14 +90,14 @@ async def get_full_user(event):
         if previous_message.forward:
             replied_user = await event.client(
                 GetFullUserRequest(
-                    previous_message.forward.from_id or previous_message.forward.channel_id
+                    previous_message.forward.sender_id or previous_message.forward.channel_id
                 )
             )
             return replied_user, None
         else:
             replied_user = await event.client(
                 GetFullUserRequest(
-                    previous_message.from_id
+                    previous_message.sender_id
                 )
             )
             return replied_user, None
