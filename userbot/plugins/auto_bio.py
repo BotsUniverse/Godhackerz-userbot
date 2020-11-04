@@ -1,4 +1,4 @@
-#autobio for @PhycoNinja13b, Edit bio strings Amigo if u use this plugin, Or else u are cursed :)
+#autobio for @Godhackerzuserbot, Edit bio strings Amigo if u use this plugin, Or else u are cursed :)
 import asyncio
 import time
 from telethon import events
