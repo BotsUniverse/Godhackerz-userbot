@@ -1,7 +1,9 @@
 """Carbon Scraper Plugin for Userbot. //text in creative way.
-usage: .karb //as a reply to any text message
+usage: .remkarb //as a reply to any text message
 
-Thanks to @r4v4n4 for vars,,, Random RGB feature by @PhycoNinja13b"""
+Thanks to @r4v4n4 for vars,,, Random RGB feature by @PhycoNinja13b
+© @Godhackerzuserbot
+Don't Change Credits Gay For @Godhackerzuserbot """
 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
@@ -14,8 +16,8 @@ import asyncio
 import os
 import random
 from userbot.utils import admin_cmd
-#@borg.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
-@borg.on(admin_cmd(pattern="karb"))
+#@borg.on(events.NewMessage(pattern=r"\.remkarb ", outgoing=True))
+@borg.on(admin_cmd(pattern="remkarb"))
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)
@@ -57,7 +59,7 @@ async def carbon_api(e):
 
  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
    """ A Wrapper for carbon.now.sh """
-   await e.edit("⬜⬜⬜⬜⬜")
+   await e.edit("starting")
    CARBON = 'https://carbon.now.sh/?bg=rgba({R}%2C{G}%2C.{B}%2C1)&t={T}&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code={code}'
    CARBONLANG = "en"
    textx = await e.get_reply_message()
@@ -77,7 +79,7 @@ async def carbon_api(e):
    chrome_options.add_argument('--disable-gpu')
    prefs = {'download.default_directory' : './'}
    chrome_options.add_experimental_option('prefs', prefs)
-   await e.edit("⬛⬛⬜⬜⬜")
+   await e.edit("Making 1% Master")
 
    driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER, options=chrome_options)
    driver.get(url)
@@ -90,17 +92,17 @@ async def carbon_api(e):
    sleep(5) # this might take a bit.
    driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
    sleep(5)
-   await e.edit("⬛⬛⬛⬜⬜")
+   await e.edit("Processed 98% Master")
    driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
    sleep(5) #Waiting for downloading
 
-   await e.edit("⬛⬛⬛⬛⬛")
+   await e.edit("Done Master")
    file = './carbon.png'
    await e.edit("✅RGB Karbon Completed, Uploading RGB Karbon✅")
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="Carbonised by @TechnoAyanBoT",
+         caption="Carbonised by @Godhackerzuserbot",
          force_document=False,
          reply_to=e.message.reply_to_msg_id,
          )
