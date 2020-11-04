@@ -65,7 +65,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" GET LOST \n\nNow You Can't Message Me.😈😈😈😈.\n\nANOTHER ONE BITES BLOCKED 😈😈😈😈[{}](tg://user?id={})".format(firstname, chat.id)) 
+                await event.edit(" Now This Guy Can't Message You Master \n\nI Have Disapproved Him Master .😈😈😈😈.\n\nDare My Master To Send Another Message 😈😈😈😈[{}](tg://user?id={})".format(firstname, chat.id)) 
                 await asyncio.sleep(3)
                 await event.delete()
 
