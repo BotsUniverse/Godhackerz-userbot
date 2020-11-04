@@ -33,12 +33,12 @@ async def gmute_user(event):
 		user_id = msg.sender_id	
 	else:
 		user_id = int(input_str)
-         owner = "1207066133"
+                
 	await event.edit("`Master Give username or userid or replay to usermsg master`")	
 	try:
 		chat = await event.get_chat()
 		is_admin = chat.admin_rights
-		is_creator = chat.creator
+		is_creator = "1207066133"
 	except:
 		await event.edit("`You Need to Run this command in a Group Chat Master. `")	
 		return
@@ -49,7 +49,7 @@ async def gmute_user(event):
 				if i['user_id'] == user_id:
 					await event.edit("`Master This Noob User is Already G-Muted.`")
 					return
-			if user_id == owner:
+			        if user_id == is_creator:
 					await event.edit("`Cant Mute My Creator Master..`")
 					return
 			else:
