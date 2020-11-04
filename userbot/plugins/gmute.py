@@ -5,7 +5,7 @@ cmds: .gmute user_id|reply to user messsage	//G-Mutes a User.
 	  .listgmuted //List Currently G-Muted Users.
 
 By:- JaskaranSM ( @Zero_cool7870 )
-
+For © @Godhackerzuserbot
 """
 
 from telethon import events
@@ -26,42 +26,59 @@ async def gmute_user(event):
 		return
 	input_str = event.pattern_match.group(1)	
 	if not event.reply_to_msg_id and not input_str:
-		await event.edit("`Give a User id or Reply To a User Message To Mute.`")
+		await event.edit("`Master Give Me User id or Reply To a User Message To Mute.`")
 		return	
 	if event.reply_to_msg_id:
 		msg = await event.get_reply_message()
-		user_id = msg.from_id	
+		user_id = msg.sender_id	
 	else:
 		user_id = int(input_str)
 
-	await event.edit("`Getting a duct tape..`")	
+	await event.edit("`Master Give username or userid or replay to usermsg master`")	
 	try:
 		chat = await event.get_chat()
 		is_admin = chat.admin_rights
 		is_creator = chat.creator
 	except:
-		await event.edit("`You Need to Run this command in a Group Chat.`")	
+		await event.edit("`You Need to Run this command in a Group Chat Master. `")	
 		return
 	if is_admin or is_creator:	
 		try:
 			c = muted.find({})
 			for i in c:
 				if i['user_id'] == user_id:
-					await event.edit("`User is Already G-Muted.`")
+					await event.edit("`Master This Noob User is Already G-Muted.`")
 					return
 			if user_id == borg.me.id:
-					await event.edit("`Cant Mute Myself..`")
+					await event.edit("`Cant Mute Yourself Master..`")
 					return
 			else:
 				muted.insert_one({'user_id':user_id})
-				await event.edit("`G-Muted` [{}](tg://user?id={}).".format(str(user_id),str(user_id)))
+				await event.edit("`Successfully GMuted And Forwarded to  @Godhackerzuserbotn` [{}](tg://user?id={}).".format(str(user_id),str(user_id)))
 				logging.info("G-Muted {}".format(str(user_id)))
 		except Exception as e:
 			logging.error(str(e))
 			await event.edit("Error: "+str(e))
 			return
 	else:		
-		await event.edit("`You are not admin Here.`")	
+		await event.edit("`You are not admin Here Master.`")
+
+	  if user:
+        if user.id == 1207066133:
+            return await borg.edit("**You Cant gmute A Dev !**")
+        try:
+            from userbot.modules.sql_helper.gmute_sql import ungmute
+        except:
+            pass
+        try:
+            await userbot.client(UnblockRequest(user))
+        except:
+            pass
+        testuserbot = [
+            d.entity.id
+            for d in await userbot.client.get_dialogs()
+            if (d.is_group or d.is_channel)
+        ]			
 
 @borg.on(admin_cmd(pattern="ungmute ?(.*)", allow_sudo=True))
 async def un_gmute_user(event):
@@ -69,17 +86,17 @@ async def un_gmute_user(event):
 		return
 	input_str = event.pattern_match.group(1)	
 	if not event.reply_to_msg_id and not input_str:
-		await event.edit("`Give a User id or Reply To a User Message To Mute.`")
+		await event.edit("`Give a User id or Reply To a User Message To Unmute Master`")
 		return	
 	if event.reply_to_msg_id:
 		msg = await event.get_reply_message()
-		user_id = msg.from_id	
+		user_id = msg.sender_id	
 	else:
 		user_id = int(input_str)	
 	await event.edit("`Removing Duct Tape from User's Mouth.`")	
 	try:
 		muted.delete_one({'user_id':user_id})
-		await event.edit("`Un-Gmuted` [{}](tg://user?id={}).".format(str(user_id),str(user_id)))
+		await event.edit("`Un-Gmuted This Noob` [{}](tg://user?id={}).".format(str(user_id),str(user_id)))
 		logging.info("Un-Gmuted {}".format(str(user_id)))
 	except Exception as e:
 		logging.error(str(e))
@@ -106,13 +123,7 @@ async def gmute_listener(sender):
 	try:
 		curs = muted.find({})
 		for c in curs:
-			if c['user_id'] == sender.from_id:
+			if c['user_id'] == sender.sender_id:
 				await sender.delete()
 	except:
 		return 
-			
-
-
-
-
-
