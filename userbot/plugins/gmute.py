@@ -33,7 +33,7 @@ async def gmute_user(event):
 		user_id = msg.sender_id	
 	else:
 		user_id = int(input_str)
-
+         owner = "1207066133"
 	await event.edit("`Master Give username or userid or replay to usermsg master`")	
 	try:
 		chat = await event.get_chat()
@@ -49,8 +49,8 @@ async def gmute_user(event):
 				if i['user_id'] == user_id:
 					await event.edit("`Master This Noob User is Already G-Muted.`")
 					return
-			if user_id == borg.me.id:
-					await event.edit("`Cant Mute Yourself Master..`")
+			if user_id == owner:
+					await event.edit("`Cant Mute My Creator Master..`")
 					return
 			else:
 				muted.insert_one({'user_id':user_id})
@@ -63,23 +63,7 @@ async def gmute_user(event):
 	else:		
 		await event.edit("`You are not admin Here Master.`")
 
-        if user:
-        if user.id ==1207066133 :
-            return await friday.edit("**You Cant gmute A Dev !**")
-        try:
-            from userbot.modules.sql_helper.gmute_sql import ungmute
-        except:
-            pass
-        try:
-            await userbot.client(UnblockRequest(user))
-        except:
-            pass
-        testuserbot = [
-            d.entity.id
-            for d in await userbot.client.get_dialogs()
-            if (d.is_group or d.is_channel)
-        ]			
-
+        
 @borg.on(admin_cmd(pattern="ungmute ?(.*)", allow_sudo=True))
 async def un_gmute_user(event):
 	if event.fwd_from:
