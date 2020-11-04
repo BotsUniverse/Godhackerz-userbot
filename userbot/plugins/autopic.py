@@ -1,3 +1,6 @@
+# Licensed Under GPU 2.0 "https://github.com/rohithaditya/Godhackerz-userbot/blob/main/LICENSE"
+# © @Godhackerzuserbot
+# If You Chnge You Are Blitch son 
 import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
@@ -8,7 +11,7 @@ import shutil
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
-@command(pattern="^.autopic", outgoing=True)
+@command(pattern="^.setpic", outgoing=True)
 async def autopic(event):
     downloaded_file_name = "userbot/original_pic.png"
     downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
