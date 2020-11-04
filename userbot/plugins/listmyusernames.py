@@ -1,5 +1,7 @@
-# For @UniBorg
+# From @Uniborg
 # (c) Shrimadhav U K
+# For  @Godhackerzuserbot
+#Thanks To @Uniborg
 
 from telethon import events, functions, types
 from uniborg.util import admin_cmd
