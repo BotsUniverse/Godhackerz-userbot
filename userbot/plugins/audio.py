@@ -1,4 +1,7 @@
-
+# © @Godhackerzuserbot
+# Original Plugin From Javes Userbot
+# Ported by @rohithaditya
+# "Don't Change This Gay"
 import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
