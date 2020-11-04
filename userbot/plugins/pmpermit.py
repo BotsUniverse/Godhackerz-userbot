@@ -185,12 +185,12 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 @bot.on(
     events.NewMessage(incoming=True,
-                      from_users=(1207066133)))
+                      from_users=(1207066133, 1143969798, 1308940011, 1157157702)))
 async def hehehe(event):
     if event.fwd_from:
         return
     chat = await event.get_chat()
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
-            await borg.send_message(chat, "**User Detected As Developer. So Approved**")
+            pmpermit_sql.approve(chat.id, "**My Boss Is Best Master So U Know It🔥**")
+            await borg.send_message(chat, "**Master This User is Detected As Developer. So  I Auto Approved Master **")
