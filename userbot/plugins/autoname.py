@@ -1,9 +1,9 @@
-# Copyright (C) 2020 by TechnoAyanOfficial@Github, < https://github.com/TechnoAyanOfficial >.
+# Copyright (C) 2020 by @Godhackerzuserbot, < https://github.com/rohithaditya/Godhackerz-userbot.git>.
 #
-# This file is part of < https://github.com/TechnoAyanOfficial/TechnoAyanBOT > project,
+# This file is part of < https://github.com/rohithaditya/Godhackerz-userbot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TechnoAyanOfficial/TechnoAyanBOT/blob/Exclusive/LICENSE >
-#
+# Please see < https://github.com/rohithaditya/Godhackerz-userbot/blob/main/LICENSE >
+# © @Godhackerzuserbot
 # All rights reserved.
 
 
@@ -21,7 +21,7 @@ A_N = str(AUTONAME) if AUTONAME else f"{ALIVE_NAME}"
 
 DEL_TIME_OUT = 60
 
-@borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="setname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -42,7 +42,7 @@ async def _(event):
             # logger.info(r.stringify())
             # await borg.send_message(  # pylint:disable=E0602
             #     Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-            #     "Successfully Changed Profile Name"
+            #     "Successfully Changed Profile Name For Master"
             # )
         await asyncio.sleep(DEL_TIME_OUT)
-    await event.edit(f"__Auto Name Started ! Check Your Name__") 
+    await event.edit(f"__Auto Name Started Master ! Check Your Name Master!!!_") 
