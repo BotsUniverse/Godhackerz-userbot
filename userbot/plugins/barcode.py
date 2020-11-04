@@ -1,6 +1,7 @@
 """BarCode Generator
-Command .barcode (your text)
+Command .qr(your text)
 By @snappy101
+© @Godhackerzuserbot
 """
 
 import asyncio
@@ -12,7 +13,7 @@ from datetime import datetime
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="barcode ?(.*)"))
+@borg.on(admin_cmd(pattern="qr ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
