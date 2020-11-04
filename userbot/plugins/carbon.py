@@ -92,7 +92,7 @@ async def carbon_api(e):
 
    code = quote_plus(pcode) # Converting to urlencoded
 
-   await e.edit("`⬜️⬜️⬜️⬜️`")
+   await e.edit("`Making It`")
 
    url = CARBON.format(code=code, lang=CARBONLANG)
 
@@ -118,7 +118,7 @@ async def carbon_api(e):
 
    driver.get(url)
 
-   await e.edit("`⬛️⬜️⬜️⬜️`")
+   await e.edit("`15% Done`")
 
    download_path = './'
 
@@ -134,17 +134,17 @@ async def carbon_api(e):
 
    driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
 
-   await e.edit("`⬛️⬛️⬜️⬜️`")
+   await e.edit("`25% Done`")
 
    # Waiting for downloading
 
    sleep(2.5)
 
-   await e.edit("`⬛️⬛️⬛️⬜️`")
+   await e.edit("`75% Done`")
 
    file = './carbon.png'
 
-   await e.edit("`⬛️Done⬛️`")
+   await e.edit("`⬛️Finished Master⬛️`")
 
    await e.client.send_file(
 
