@@ -31,7 +31,7 @@ async def ANTI_SPAMBOT(welcm):
             if welcm.user_added:
                 ignore = False
                 try:
-                    adder = welcm.action_message.from_id
+                    adder = welcm.action_message.sender_id
                 except AttributeError:
                     return
 
@@ -49,7 +49,7 @@ async def ANTI_SPAMBOT(welcm):
                 if users_list:
                     users = welcm.action_message.action.users
                 else:
-                    users = [welcm.action_message.from_id]
+                    users = [welcm.action_message.sender_id]
 
             await sleep(5)
             spambot = False
@@ -186,3 +186,4 @@ CMD_HELP.update({
         \nthis module will ban(or inform the admins of the group about) the\
         \nspammer(s) if they match the userbot's anti-spam algorithm."
 })
+#© @Godhackerzuserbot
