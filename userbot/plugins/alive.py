@@ -6,10 +6,10 @@ from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
-PM_IMG = "https://telegra.ph/file/b8324f81fb4176ff8494d.jpg"
+PM_IMG = "https://telegra.ph/file/8e929112328df851306e4.jpg"
 pm_caption = "**This is GodHackerz Userbot**\n\n"
 
-pm_caption += "Hi THERE Master {DEFAULT_USER} ! I am Alive. All functions are working properly.\n\n"
+pm_caption += "Hi THERE {DEFAULTUSER} MASTER ! I am Alive. All functions are working properly.\n\n"
 pm_caption += "⚡️Status⚡️\n\n"
 pm_caption += "😎Telethon Version : (1.16.04)\n"
 pm_caption += "🥳Python : (4.0)\n"
@@ -21,6 +21,7 @@ pm_caption += f"🥰My Pro Master : {DEFAULTUSER}\n\n"
 pm_caption += "🤖[✅ Deploy Me Now ✅](https://github.com/rohithaditya/Godhackerz-userbot.git)\n\n"
 pm_caption += "© [GodHackerz Userbot](https://github.com/rohithaditya/Godhackerz-userbot/blob/main/LICENSE)\n\n"
 pm_caption += "🙏Join [Channel](https://t.me/Godhackerzuserbot) For Latest Updates"
+pm_caption += "SYSTEM HEALTH : STABLE "
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
