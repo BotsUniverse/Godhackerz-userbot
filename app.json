@@ -1,7 +1,7 @@
 {
   "name": "GODHACKERZ USERBOT",
   "description": "A USERBOT TO MANAGE YOUR TELEGRAM ACCOUNT ",
-  "logo": "https://telegra.ph/file/b8324f81fb4176ff8494d.jpg",
+  "logo": "https://telegra.ph/file/8e929112328df851306e4.jpg", 
   "keywords": [
     "telegram",
     "userbot",
@@ -47,13 +47,12 @@
       "description": "A Group ID Where You Want Logging Feature",
       "value": ""
     },
-    "PRIVATE_GROUP_BOT_API_ID": { 
+    "PRIVATE_GROUP_BOT_ID": { 
        "description": "Just Copy Paste PRIVATE_GROUP_ID FOR AFK PLUGIN", 
        "value": ""
      }, 
     "STRING_SESSION": {
       "description": "Get From Repl.run Or Run Locally or https://Godhackerz-userbot.rohithaditya.repl.run", 
-
       "value": ""
     },
     "GITHUB_ACCESS_TOKEN": {
