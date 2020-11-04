@@ -1,6 +1,7 @@
-# For UniBorg
+# From UniBorg
 # By Priyam Kalra
-# Syntax (.calc <term1><operator><term2>)
+# Ported For  @Godhackerzuserbot By @rohithaditya
+# Syntax (.cal.c <term1><operator><term2>)
 # For eg .calc 02*02 or 99*99 (the zeros are important) (two terms and two digits max)
 from telethon import events
 from uniborg.util import admin_cmd
