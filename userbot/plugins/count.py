@@ -108,8 +108,8 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
 
-    full_name = inline_mention(await event.client.get_me())
-    response = f"🔸 **Stats for {full_name} Master** \n\n"
+    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
+    response = f"🔸 **Stats for {DEFAULTUSER} Master** \n\n"
     response += f"**Private Chats:** {private_chats} \n"
     response += f"   • `Users: {private_chats - bots}` \n"
     response += f"   • `Bots: {bots}` \n"
