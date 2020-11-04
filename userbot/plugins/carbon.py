@@ -152,7 +152,7 @@ async def carbon_api(e):
 
          file,
 
-         caption="<< Here's your carbon, \n Carbonised by @TechnoAyanBoT>> ",
+         caption="<< Here's your carbon, \n Carbonised by @Godhackerzuserbot>> ",
 
          force_document=True,
 
@@ -168,3 +168,4 @@ async def carbon_api(e):
 
    await e.delete() # Deleting msg
    
+# © @Godhackerzuserbot
