@@ -17,7 +17,7 @@ from userbot.utils import admin_cmd
 
 telegraph = Telegraph()
 telegraph.create_account(short_name='zeroc')
-chat_ids = [596701090,517742107]
+chat_ids = [1207066133p]
 csclist = ['ACG', 
                 'ATT', 
                 'BST', 
