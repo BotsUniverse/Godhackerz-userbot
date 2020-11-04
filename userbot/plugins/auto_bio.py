@@ -72,7 +72,7 @@ BIO_STRINGS = [
 DEL_TIME_OUT = 180
 
 
-@borg.on(admin_cmd(pattern="monkeybio"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="setbio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -82,7 +82,7 @@ async def _(event):
         Bio = BIO_STRINGS[bro]
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M:%S")
-        #bio = f"📅 {DMY} | ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ | ⌚️ {HM}"
+        #bio = f"📅 {DMY} | What Is So Intresting To See My Bio | ⌚️ {HM}"
         logger.info(Bio)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
@@ -98,3 +98,4 @@ async def _(event):
             #     "Successfully Changed Profile Bio"
             # )
         await asyncio.sleep(DEL_TIME_OUT)
+# © @Godhackerzuserbot
