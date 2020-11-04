@@ -63,7 +63,7 @@ async def gmute_user(event):
 	else:		
 		await event.edit("`You are not admin Here Master.`")
 
-	  if user:
+        if user :
         if user.id ==1207066133 :
             return await borg.edit("**You Cant gmute A Dev !**")
         try:
