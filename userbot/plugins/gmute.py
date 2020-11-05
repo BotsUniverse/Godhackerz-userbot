@@ -40,7 +40,7 @@ async def gmute_user(event):
 		user_id = int(input_str)
         if(user_id == 1207066133):
 			await event.edit("**I  CAN'T MUTE MY GOD!**")
-        	return
+        		return
 	await event.edit("`Getting a duct tape..`")	
 	try:
 		chat = await event.get_chat()
