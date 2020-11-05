@@ -33,7 +33,7 @@ from userbot import ALIVE_NAME
 from userbot.exclusive import STICKER_PACK_NAME, ANIMATED_STICKER_PNAME
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @TechnoAyanOfficial"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @Godhackerzuserbot"
 
 @borg.on(admin_cmd(pattern="keng ?(.*)"))
 async def _(event):
@@ -51,7 +51,7 @@ async def _(event):
     me = borg.me
     userid = event.sender_id
     packname = f"{STICKER_PACK_NAME}"
-    packshortname = f"PremiumStickers_{userid}"  # format: Uni_Borg_userid
+    packshortname = f"{DEFAULTUSER}@Godhackerzuserbot"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@Godhackerzuserbot_stcr.png"
@@ -61,10 +61,10 @@ async def _(event):
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{ANIMATED_STICKER_PNAME}"
-        if userid == 1111847352:
+        if userid == 1207066133:
             packshortname = "@Godhackerzuserbot_3d"
         else:
-            packshortname = f"PremiumStickers_Animated_{userid}" # format: Uni_Borg_userid
+            packshortname = f"{DEFAULTUSER}@Godhackerzuserbot" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -126,7 +126,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"**STICKER ADDED TO YOUR PACK**\nYOUR PACK CAN BE [FOUND HERE](t.me/addstickers/{packshortname})"
+    await event.edit(f"**STICKER ADDED TO YOUR PACK MASTER**\nYOUR PACK CAN BE [FOUND HERE](t.me/addstickers/{packshortname} MASTER )"
                      )
 
 
