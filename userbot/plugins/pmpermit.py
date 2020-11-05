@@ -33,7 +33,7 @@ USER_BOT_NO_WARN = f"__👋 Hello There !\n\n🤖 I'm assistant of__ {DEFAULTUSE
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @command(pattern="^.a?(.*)")
+    @command(pattern="^.hi?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
            return
@@ -54,7 +54,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.delete()
 
 
-    @command(pattern="^.da?(.*)")
+    @command(pattern="^.bye?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
