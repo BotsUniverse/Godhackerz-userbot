@@ -125,7 +125,7 @@ async def stats(
     )
     response += f"**Unread:** {unread} \n"
     response += f"**Unread Mentions:** {unread_mentions} \n\n"
-    response += f"**Master**`Wow, You Are Admin In {admin_in_broadcast_channels + admin_in_groups} Total Chats Master,**I Am Very 😎Proud To Have A Master Like You Master`\n"
+    response += f"**Master**, `Wow, You Are Admin In {admin_in_broadcast_channels + admin_in_groups} Total Chats Master,**I Am Very 😎Proud To Have A Master Like You Master**`\n"
     response += f"__It Took:__ {stop_time:.02f}s \n"
 
     await event.edit(response)
