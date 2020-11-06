@@ -62,9 +62,9 @@ async def _(event):
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{ANIMATED_STICKER_PNAME}"
         if userid == 1207066133:
-            packshortname = "@Godhackerzuserbot_3d"
+            packshortname = "Godhackerzuserbot_{DEFAULT_USER}"
         else:
-            packshortname = f"{userid}_Godhackerzuserbot" # format: Uni_Borg_userid
+            packshortname = f"Godhackerzuserbot" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -126,7 +126,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"**STICKER ADDED TO YOUR PACK MASTER**\nYOUR PACK CAN BE [FOUND HERE](t.me/addstickers/{packshortname} MASTER )"
+    await event.edit(f"**STICKER ADDED TO YOUR PACK MASTER**\nYOUR PACK CAN BE [FOUND HERE](t.me/addstickers/{packshortname}) MASTER"
                      )
 
 
