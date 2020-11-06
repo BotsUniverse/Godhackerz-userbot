@@ -62,7 +62,7 @@ async def _(event):
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{ANIMATED_STICKER_PNAME}"
         if userid == 1207066133:
-            packshortname = "Godhackerzuserbot_{DEFAULT_USER}"
+            packshortname = "GODHACKERZUSERBOT"
         else:
             packshortname = f"Godhackerzuserbot" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
