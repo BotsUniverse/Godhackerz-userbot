@@ -51,7 +51,7 @@ async def _(event):
     me = borg.me
     userid = event.sender_id
     packname = f"{STICKER_PACK_NAME}"
-    packshortname = f"{DEFAULTUSER}@Godhackerzuserbot"  # format: Uni_Borg_userid
+    packshortname = f"{DEFAULTUSER} Godhackerzuserbot"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@Godhackerzuserbot_stcr.png"
@@ -64,7 +64,7 @@ async def _(event):
         if userid == 1207066133:
             packshortname = "@Godhackerzuserbot_3d"
         else:
-            packshortname = f"{DEFAULTUSER}@Godhackerzuserbot" # format: Uni_Borg_userid
+            packshortname = f"{DEFAULTUSER} Godhackerzuserbot" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -74,7 +74,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("__HOLD ON LET ME KANG THIS__")
+    await event.edit("**HOLD ON MASTER LET ME KANG THIS**")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
