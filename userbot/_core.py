@@ -56,6 +56,8 @@ async def send(event):
     end = datetime.now()
     time_taken_in_ms = (end - start).seconds
     await event.edit("Uploaded {} in {} seconds Master".format(input_str, time_taken_in_ms))
+    await event.edit("uploaded by {}".format(DEFAULT_USER))
+    await event.edit("uploaded by @Godhackerzuserbot") 
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
 
