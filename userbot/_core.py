@@ -13,7 +13,7 @@ import userbot.utils
 from datetime import datetime
 
 DELETE_TIMEOUT = 8
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
+
 
 @command(pattern="^.add", outgoing=True)
 async def install(event):
