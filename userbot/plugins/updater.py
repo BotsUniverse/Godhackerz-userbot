@@ -37,8 +37,7 @@ RESTARTING_APP = "re-starting heroku application"
 
 @borg.on(admin_cmd("update ?(.*)", outgoing=True))
 async def updater(message):
-    try:
-        repo = git.Repo()
+
     except git.exc.InvalidGitRepositoryError as e:
         repo = git.Repo.init()
         origin = repo.create_remote(REPO_REMOTE_NAME, OFFICIAL_UPSTREAM_REPO)
