@@ -107,8 +107,8 @@ if ENV:
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
         #updater_Dont_touch_u_noob
-        UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/rohithaditya/Godhackerz-userbot.git"
+        OFFICAL_UPSTREAM_REPO = os.environ.get(
+            "OFFICAL_UPSTREAM_REPO", "https://github.com/rohithaditya/Godhackerz-userbot"
         )
 else:
     class Config(object):
