@@ -11,8 +11,6 @@ import traceback
 import os
 import userbot.utils
 from datetime import datetime
-from userbot import ALIVE_NAME
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
 DELETE_TIMEOUT = 8
 
 
