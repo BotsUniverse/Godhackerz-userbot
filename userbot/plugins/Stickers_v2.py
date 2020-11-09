@@ -13,7 +13,7 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
 
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from userbot.utils import borg
 
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
