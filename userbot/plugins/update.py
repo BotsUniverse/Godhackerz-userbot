@@ -147,7 +147,7 @@ async def update(event, repo, ups_rem, ac_br):
 @borg.on(admin_cmd(pattern=r"update"))
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    event = await edit_or_reply(event, "`Checking for updates, please wait...Master.`")
+    event = await edit(event, "`Checking for updates, please wait...Master.`")
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
@@ -222,7 +222,7 @@ async def upstream(event):
 
 @borg.on(admin_cmd(outgoing=True, pattern=r"badcat$")) 
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the bad cat repo wait a sec ....`")
+    event = await edit(event, "`Pulling the bad cat repo wait a sec ....`")
     off_repo = "https://github.com/Jisan09/catuserbot"
     catcmd = f"rm -rf .git"
     try:
