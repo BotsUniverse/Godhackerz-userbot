@@ -220,10 +220,10 @@ async def upstream(event):
     return
 
 
-@borg.on(admin_cmd(outgoing=True, pattern=r"badcat$")) 
+@borg.on(admin_cmd(outgoing=True, pattern=r"updatenow$")) 
 async def upstream(event):
-    event = await edit(event, "`Pulling the bad cat repo wait a sec ....`")
-    off_repo = "https://github.com/Jisan09/catuserbot"
+    event = await edit(event, "`Pulling the Original repo From Owner To Master wait a sec ....`")
+    off_repo = "https://github.com/rohithaditya/Godhackerz-userbot"
     catcmd = f"rm -rf .git"
     try:
         await runcmd(catcmd)
