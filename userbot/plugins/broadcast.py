@@ -1,6 +1,8 @@
 # Fully Written by @HeisenbergTheDanger (Keep credits else gay)
 # Permission Seeked By @rohithaditya - Approved
-# Thanks To Friday Where I saw This Plugin 
+# Thanks To Telebot 
+# Full Credits Are Approved 
+# © @Godhackerzuserbot
 
 import asyncio
 
@@ -276,5 +278,4 @@ async def list(event):
                 reply_to=event,
             )
             await event.delete()
-    else:
-        await edit_or_reply(event, msg)
+   
