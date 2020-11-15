@@ -58,7 +58,7 @@ async def _(event):
     await moods.edit("`Wew ! I Love That Sticker MASTER ! Mind If i Kang It ?`")
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion "@Godhackerzuserbot.png"
+    file_ext_ns_ion = "@Godhackerzuserbot.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
