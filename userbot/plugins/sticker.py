@@ -23,7 +23,7 @@ from telethon.tl.types import (
 )
 
 from userbot import ALIVE_NAME
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GODHACKERZ USER"
 FILLED_UP_DADDY = "Invalid pack selected."
