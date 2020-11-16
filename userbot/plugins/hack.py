@@ -31,18 +31,7 @@ async def _(event):
 
     await event.edit("Hacking..")
 
-    # Coded by @AbirHasan2005
-# Telegram Group: http://t.me/linux_repo
-
-
-from telethon import events
-import asyncio
-from userbot.utils import admin_cmd
-         
-   for i in animation_ttl:
-        	
-        await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 11]) = [
+    animation_chars = [
         
             "`Connecting To Hacked Private Server...`",
             "`Target Selected.`",
@@ -54,7 +43,7 @@ from userbot.utils import admin_cmd
             "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
             "`Hacking... 100%\n█████████HACKED███████████ `",
-            "`Targeted Account Hacked...\n\nPay 69$ To Remove this hack..`"
+            "`Targeted Account Hacked. Master \n\nPay 69$ To  My Master to Remove this hack..`"
         ]
 
     for i in animation_ttl:
