@@ -151,7 +151,7 @@ def generate_change_log(git_repo, diff_marker):
     return out_put_str
 
 async def deploy_start(tgbot, message, refspec, remote):
-    await message.edit(RESTARTING_APP_MASTER)
+    await message.edit(RESTARTING_APP)
     await message.edit("Updating and Deploying New Branch Master!!;Please wait for 5 minutes then use `.alive` to check if i'm working or not Master!If Not Go To [Support Group](t.me/Godhackerzuserbot)")
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
