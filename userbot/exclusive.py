@@ -8,9 +8,9 @@
 
 import os
 
-STICKER_PACK_NAME = os.environ.get("STICKER_PACK_NAME", "Creepy Stickers")
+STICKER_PACK_NAME = os.environ.get("STICKER_PACK_NAME", "Godhackerzuserbot_Stickers_kang")
 
-ANIMATED_STICKER_PNAME = os.environ.get("ANIMATED_STICKER_PNAME", "Creepy Animated Stickers")
+ANIMATED_STICKER_PNAME = os.environ.get("ANIMATED_STICKER_PNAME", "Godhackerzuserbot_Animated_Stickers")
 
 AUTONAME = os.environ.get("AUTONAME", None)
 
