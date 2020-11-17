@@ -14,7 +14,7 @@ from datetime import datetime
 DELETE_TIMEOUT = 8
 
 
-@command(pattern="^.install", outgoing=True)
+@command(pattern="^.load", outgoing=True)
 async def install(event):
     if event.fwd_from:
         return
@@ -38,7 +38,7 @@ async def install(event):
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
 
-@command(pattern="^.send (?P<shortname>\w+)$", outgoing=True)
+@command(pattern="^.give (?P<shortname>\w+)$", outgoing=True)
 async def send(event):
     if event.fwd_from:
         return
@@ -61,7 +61,7 @@ async def send(event):
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
 
-@command(pattern="^.unload (?P<shortname>\w+)$", outgoing=True)
+@command(pattern="^.remove (?P<shortname>\w+)$", outgoing=True)
 async def unload(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def unload(event):
         remove_plugin(shortname)
         await event.edit(f"Unloaded {shortname} successfully")
     except Exception as e:
-        await event.edit("Successfully unload {shortname}\n{} Plugin Master".format(shortname, str(e)))
+        await event.edit("Successfully removed {shortname}\n{} Plugin Master".format(shortname, str(e)))
 
 @command(pattern="^.load (?P<shortname>\w+)$", outgoing=True)
 async def load(event):
