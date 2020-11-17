@@ -1,6 +1,9 @@
 # Stickers Pluging V2
 # @Godhackerzuserbot
 # © @Godhackerzuserbot
+# Fixed By @Private_45 
+# Don't Change Credits Or Else Your Mom Will Fuck up🤬🤬🤬🤬🤬
+
 
 """Available Commands:
 .keng [Optional Emoji]
@@ -34,7 +37,7 @@ from userbot import ALIVE_NAME
 from userbot.exclusive import STICKER_PACK_NAME, ANIMATED_STICKER_PNAME
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @TechnoAyanOfficial"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @Godhackerzuserbot"
 
 @borg.on(admin_cmd(pattern="keng ?(.*)"))
 async def _(event):
@@ -52,10 +55,10 @@ async def _(event):
     me = borg.me
     userid = event.sender_id
     packname = f"{STICKER_PACK_NAME}"
-    packshortname = f"PremiumStickers_{userid}"  # format: Uni_Borg_userid
+    packshortname = f"Kanged_Pack_{DEFAULTUSER}"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@TechnoAyanOfficial_Sticker.png"
+    file_ext_ns_ion = "@Godhackerzuserbot_Sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
@@ -63,7 +66,7 @@ async def _(event):
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{ANIMATED_STICKER_PNAME}"
         if userid == 1111847352:
-            packshortname = "TechnoAyanOfficial_animated"
+            packshortname = "@Godhackerzuserbot_animated"
         else:
             packshortname = f"PremiumStickers_Animated_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
@@ -75,7 +78,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("__HOLD ON LET ME KANG THIS_MASTER_")
+    await event.edit("HOLD ON LET ME KANG THIS_MASTER_")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
