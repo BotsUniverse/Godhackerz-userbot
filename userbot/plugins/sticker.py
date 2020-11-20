@@ -55,7 +55,7 @@ async def _(event):
     me = borg.me
     userid = event.sender_id
     packname = f"{STICKER_PACK_NAME}"
-    packshortname = f"Kanged_Pack_{DEFAULTUSER}"  # format: Uni_Borg_userid
+    packshortname = f"{User_id}_Pack"  # format: Uni_Borg AliveName
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@Godhackerzuserbot_Sticker.png"
