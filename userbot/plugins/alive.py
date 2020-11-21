@@ -33,7 +33,8 @@ pm_caption += "    [GODHACKERZ](https://t.me/Godhackerzuserbot) For Latest Updat
 pm_caption += "SYSTEM HEALTH : STABLE 😎👍 "
 
 @borg.on(admin_cmd(pattern=r"alive"))
-chat = await yes.get_chat()
+async def amireallyalive(yes):
+    chat = await yes.get_chat()
 
     on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
 
