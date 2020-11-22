@@ -79,11 +79,11 @@
       "value": ""
     },
     "TG_BOT_TOKEN_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. Get it.",
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the API token of your bot. GO Get it.",
       "value": ""
     },
-    "TG_BOT_USER_NAME_BF_HER": {
-      "description": "You Telegram Bot API Key Here. Needed For Help Module And Cbutton.",
+    "TG_BOT_NAME_OF_HER": {
+      "description": "You Telegram Bot's USERNAME Here. Needed For Help Module And Cbutton. REMEMBER TYPE USERNAME WITHOUT@",
       "value": ""
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
