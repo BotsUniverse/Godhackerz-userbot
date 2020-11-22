@@ -12,13 +12,13 @@
 
 
 ### Host YOUR DREAM USERBOT  In Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rohithaditya/Godhackerz-userbot/tree/main)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rohithaditya/Godhackerz-userbot/tree/main)
 
 ## For Your STRING SESSION 
 [![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://GodHackerz-Userbot.rohithaditya.repl.run)
 
 ## APP ID AND HASH 
-FOR THAT Go to https://my.telegram.org/ Login WIth YOUR PHONE NUMBER AND GET YOUR API ID 
+FOR THAT Go to [CLICK HERE FOR YOUR API ID AND HASH](https://my.telegram.org) Login WIth YOUR PHONE NUMBER AND GET YOUR API ID 
 
 ## THANKS TO [CharlieJin](https://t.me/Charlie_jin) For Guiding me 
 
