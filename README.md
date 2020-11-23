@@ -1,5 +1,9 @@
 # GOD HACKERZ USERBOT 
    A powerful Userbot Made with Love from Team Godhackerz
+   
+   
+   # <p align="left"><a href="https://github.com/rohithaditya/Godhackerz-userbot"><img src="https://github-readme-stats.vercel.app/api/pin?username=xditya&show_icons=true&theme=dark&hide_border=true&repo=Godhackerz-userbot"></a></p><p align="centre"><a href="https://t.me/Godhackerzuserbot"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/rohithaditya/Godhackerz-userbot/stargazers"><img src="https://img.shields.io/github/rohithaditya/Godhackerz-userbot/stars/?style=social"></a><a href="https://github.com/rohithaditya/Godhackerz-userbot/fork"><img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot/?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/rohithaditya/Godhackerz-userbot/"><img src="https://img.shields.io/github/last-commit/rohithaditya/Godhackerz-userbot/?style=flat-square"></a></p>
+
  
 <p align="center">
 <img src="https://telegra.ph/file/cffc1ef157c0a8b692924.jpg" alt="GodHackerz USERBOT">
@@ -9,8 +13,6 @@
 
 ### JOIN SUPPORT GROUP FOR HELP IN 24/7 
 <a href="https://t.me/Godhackerzuserbot"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
-# <p align="left"><a href="https://github.com/rohithaditya/Godhackerz-userbot"><img src="https://github-readme-stats.vercel.app/api/pin?username=xditya&show_icons=true&theme=dark&hide_border=true&repo=Godhackerz-userbot"></a></p><p align="centre"><a href="https://t.me/Godhackerzuserbot"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/rohithaditya/Godhackerz-userbot/stargazers"><img src="https://img.shields.io/github/rohithaditya/Godhackerz-userbot/stars/?style=social"></a><a href="https://github.com/rohithaditya/Godhackerz-userbot/fork"><img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot/?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/rohithaditya/Godhackerz-userbot/"><img src="https://img.shields.io/github/last-commit/rohithaditya/Godhackerz-userbot/?style=flat-square"></a></p>
 
 
 ### Host YOUR DREAM USERBOT  In Heroku
