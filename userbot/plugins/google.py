@@ -24,7 +24,7 @@ def progress(current, total):
 
 @borg.on(admin_cmd("go (.*)"))
 async def _(event):
-    await event.edit("`UniBorg is Getting Information From Google Please Wait... ✍️🙇`")
+    await event.edit("[Me](t.me/godhackerzuserbot) is Getting Information From Google Please Wait... ✍️🙇`")
     match_ = event.pattern_match.group(1)
     match = quote_plus(match_)
     if not match:
