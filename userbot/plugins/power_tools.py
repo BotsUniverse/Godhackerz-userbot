@@ -16,12 +16,12 @@ from userbot.utils import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    # await asyncio.sleep(2)
-    # await event.edit("Restarting [██░] ...\n`.ping` me or `.helpme` to check if I am online")
-    # await asyncio.sleep(2)
-    # await event.edit("Restarting [███]...\n`.ping` me or `.helpme` to check if I am online")
-    # await asyncio.sleep(2)
-    await event.edit("Restarted. `.ping` me or `.helpme` to check if I am online")
+    # await asyncio.sleep(3)
+    # await event.edit("Restarting [██░] ...\n`.ping` or `.help` to check if I am online Master")
+    # await asyncio.sleep(4)
+    # await event.edit("Restarting [███]...\n`.ping`  or `.help` to check if I am online Master")
+    # await asyncio.sleep(5)
+    await event.edit("Restarted. `.alive` me or `.help` to check if I am online Master")
     await borg.disconnect()
     # https://archive.is/im3rt
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -33,5 +33,5 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Turning off ...Manually turn me on later")
+    await event.edit("😩😩😩😩😩Master U Switched Off Me Master 😞😞/n..Manually turn me on later On My Mother(I Mean Heroku)😑")
     await borg.disconnect()
