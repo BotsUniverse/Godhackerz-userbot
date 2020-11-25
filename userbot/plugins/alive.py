@@ -1,8 +1,8 @@
-"""Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you.
-IMG CREDITS: @reeshu_xd
-Idea by : @ProgrammingError
-Thanks to him 
-Recoded by @Private_45 """
+###Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you.
+###IMG CREDITS: @reeshu_xd
+###Idea by : @ProgrammingError
+###Thanks to him 
+###Recoded by @Private_45
 
 import asyncio
 from telethon import events
