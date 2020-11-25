@@ -2,9 +2,14 @@
 ###IMG CREDITS: @reeshu_xd
 ###Idea by : @ProgrammingError
 ###Given By : @The_Siddharth_Nigam
+### thanks to Rangrok 
+### Permission Seeked And Approved 
+### Kangers Copy With Full Text 
+### thanks To Sipak Bro
 ###Thanks To Him
 ###Thanks to him 
 ###Recoded by @Private_45
+###© @Godhackerzuserbot
 
 import asyncio
 from telethon import events
