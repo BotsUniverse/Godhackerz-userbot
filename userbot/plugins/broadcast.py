@@ -210,7 +210,7 @@ async def _(event):
 # Written by @HeisenbergTheDanger
 
 
-@borg.on(admin_cmd("badd ?(.*)")
+@borg.on(admin_cmd("badd ?(.*)")) 
 async def add_ch(event):
     if event.fwd_from:
         return
