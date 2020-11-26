@@ -24,7 +24,7 @@
 import asyncio
 
 from telethon.tl.types import InputMediaUploadedPhoto
-from uniborg.util import admin_cmd, edit_or_reply, sudo_cmd
+from uniborg.util import admin_cmd, edit_or_reply
 
 from userbot.plugins.sql_helper.broadcast_sql import (
     add_channel,
@@ -38,7 +38,6 @@ logs_id = Var.PRIVATE_GROUP_ID
 
 
 @borg.on(admin_cmd("bforward ?(.*)"))
-@borg.on(sudo_cmd("bforward ?(.*)", allow_sudo=True))
 async def forw(event):
     if event.fwd_from:
         return
@@ -87,7 +86,6 @@ async def forw(event):
 
 
 @borg.on(admin_cmd("broadcast ?(.*)"))
-@borg.on(sudo_cmd("broadcast ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -212,8 +210,7 @@ async def _(event):
 # Written by @HeisenbergTheDanger
 
 
-@borg.on(admin_cmd("badd ?(.*)"))
-@borg.on(sudo_cmd("badd ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd("badd ?(.*)")
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -249,7 +246,6 @@ async def add_ch(event):
 
 
 @borg.on(admin_cmd("brm ?(.*)"))
-@borg.on(sudo_cmd("brm ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -279,7 +275,6 @@ async def remove_ch(event):
 
 
 @borg.on(admin_cmd("listchannels"))
-@borg.on(sudo_cmd("listchannels", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
