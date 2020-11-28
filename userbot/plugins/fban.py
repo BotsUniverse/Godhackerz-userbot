@@ -23,9 +23,9 @@ async def _(event):
     else:
       victim_id = victim.from_id
       chat = "@MissRose_bot"
-        if victim_id == "1207066133":
+          if victim_id == "1207066133":
             await event.edit("LoL, you cant ban my Owner noob nibba")
-            return
+          return
       async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=609517172))
