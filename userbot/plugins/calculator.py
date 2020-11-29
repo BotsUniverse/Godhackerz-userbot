@@ -9,12 +9,12 @@ import asyncio
 from telethon.tl import functions, types
 
 #neccesary tg shit
-@borg.on(admin_cmd(pattern="calc ?(.*)"))
+@borg.on(admin_cmd(pattern="c ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
     input = event.pattern_match.group(1) #get input
-    exp = "Given expression is " + input #report back input
+    exp = "Master Had Given expression  " + input #report back input
     #lazy workaround to add support for two digits
     final_input = tuple(input)
     term1part1 = final_input[0]
@@ -28,7 +28,7 @@ async def _(event):
     final_term2 = (int(term2))
     #actual calculations go here
     if input == "help":
-        await event.edit("Syntax .calc <term1><operator><term2>\nFor eg .calc 02*02 or 99*99 (the zeros are important) (two terms and two digits max)")
+        await event.edit("Syntax .c <term1><operator><term2>\nFor eg .calc 02*02 or 99*99 (the zeros are important) (two terms and two digits max)")
     elif operator == "*":
         await event.edit("Solution -->\n" + exp + "\n" + str(final_term1 * final_term2))
     elif operator == "-":
@@ -38,6 +38,6 @@ async def _(event):
     elif operator == "/":
         await event.edit("Solution -->\n" + exp + "\n" + str(final_term1 / final_term2))
     elif operator == "%":
-        await event.edit("Solution -->\n" + exp + "\n" + str(final_term1 % final_term2))
+        await event.edit("Solution :) -->\n" + exp + "\n" + str(final_term1 % final_term2))
     else:
-        await event.edit("use .calc help")
+        await event.edit("use .c help")
