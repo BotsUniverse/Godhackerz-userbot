@@ -11,8 +11,10 @@ import traceback
 import os
 import userbot.utils
 from datetime import datetime
-DELETE_TIMEOUT = 8
 
+DELETE_TIMEOUT = 8
+thumb_image_path = "./Resources/1207066133.png"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodhackerzUserbot"
 
 @command(pattern="^.load", outgoing=True)
 async def install(event):
@@ -42,24 +44,32 @@ async def install(event):
 async def send(event):
     if event.fwd_from:
         return
+    hmm = bot.uid
     message_id = event.message.id
-    input_str = event.pattern_match["shortname"]
+    thumb = thumb_image_path
+    input_str = event.pattern_match.group(1)
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
-    start = datetime.now()
-    await event.client.send_file(  # pylint:disable=E0602
-        event.chat_id,
-        the_plugin_file,
-        force_document=True,
-        allow_cache=False,
-        reply_to=event.message.reply_to_msg_id
-    )
-    end = datetime.now()
-    time_taken_in_ms = (end - start).seconds
-    await event.edit("Uploaded {} in {} seconds Master".format(input_str, time_taken_in_ms))
-    await event.edit("uploaded by {}".format(DEFAULT_USER))
-    await event.edit("uploaded by @Godhackerzuserbot") 
-    await asyncio.sleep(DELETE_TIMEOUT)
-    await event.delete()
+    if os.path.exists(the_plugin_file):
+        start = datetime.now()
+        pro = await event.client.send_file(
+            event.chat_id,
+            the_plugin_file,
+            force_document=True,
+            allow_cache=False,
+            thumb=thumb,
+            reply_to=message_id,
+        )
+        end = datetime.now()
+        time_taken_in_ms = (end - start).seconds
+        await eor(
+            pro,
+            f"**==> Plugin name:** `{input_str}`\n**==> Uploaded in {time_taken_in_ms} seconds only.**\n**==> Uploaded by:** [{DEFAULTUSER}](tg://user?id={hmm})\n",
+        )
+        await asyncio.sleep(DELETE_TIMEOUT)
+        await event.delete()
+    else:
+        await eor(event, "**404**: __File Not Found__")
+
 
 @command(pattern="^.remove (?P<shortname>\w+)$", outgoing=True)
 async def unload(event):
