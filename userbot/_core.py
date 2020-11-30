@@ -6,6 +6,7 @@ import importlib
 from pathlib import Path
 from userbot import LOAD_PLUG
 import sys
+from userbot import ALIVE_NAME
 import asyncio
 import traceback
 import os
