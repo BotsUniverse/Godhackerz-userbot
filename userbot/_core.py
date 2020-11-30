@@ -62,14 +62,14 @@ async def send(event):
         )
         end = datetime.now()
         time_taken_in_ms = (end - start).seconds
-        await eor(
+        await event.replay(
             pro,
             f"**==> Plugin name:** `{input_str}`\n**==> Uploaded in {time_taken_in_ms} seconds only.**\n**==> Uploaded by:** [{DEFAULTUSER}](tg://user?id={hmm})\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
         await event.delete()
     else:
-        await eor(event, "**404**: __File Not Found__")
+        await replay(event, "**404**: __File Not Found__")
 
 
 @command(pattern="^.remove (?P<shortname>\w+)$", outgoing=True)
