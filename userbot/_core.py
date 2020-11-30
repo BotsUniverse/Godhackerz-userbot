@@ -12,6 +12,7 @@ import traceback
 import os
 import userbot.utils
 from datetime import datetime
+from userbot.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 8
 thumb_image_path = "./resources/1207066133.png"
@@ -23,20 +24,30 @@ async def install(event):
         return
     if event.reply_to_msg_id:
         try:
-            downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
-                await event.get_reply_message(),
-                "userbot/plugins/"  # pylint:disable=E0602
+            downloaded_file_name = (
+                await event.client.download_media(  # pylint:disable=E0602
+                    await event.get_reply_message(),
+                    "userbot/plugins/",  # pylint:disable=E0602
+                )
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
-                await event.edit("Installed Plugin `{}` Master".format(os.path.basename(downloaded_file_name)))
+                await eor(
+                    event,
+                    "Plugin successfully installed\n `{}`".format(
+                        os.path.basename(downloaded_file_name)
+                    ),
+                )
             else:
                 os.remove(downloaded_file_name)
-                await event.edit("Error Master Cannot install this plugin. Maybe preloaded or already Installed Master. If you find any errors plz report at  @Godhackerzuserbot") 
+                await eor(
+                    event,
+                    "**Error!**\nPlugin cannot be installed Master!\n Or may have been pre-installed Master. If You Find Any Error Then Go To [Support Group](t.me/Godhackerzuserbot) Master",
+                )
         except Exception as e:  # pylint:disable=C0103,W0703
-            await event.edit(str(e))
+            await eor(event, str(e))
             os.remove(downloaded_file_name)
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
@@ -79,9 +90,11 @@ async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
         remove_plugin(shortname)
-        await event.edit(f"Unloaded {shortname} successfully")
+        qwe = await eor(event, f"Master I Have Successfully unloaded {shortname} This Stupid Plugin")
     except Exception as e:
-        await event.edit("Successfully removed {shortname}\n{} Plugin Master".format(shortname, str(e)))
+        await qwe.edit(
+            "Master I Have Successfully unloaded {shortname}\n{} This Plugin".format(shortname, str(e))
+        )
 
 @command(pattern="^.load (?P<shortname>\w+)$", outgoing=True)
 async def load(event):
@@ -91,9 +104,11 @@ async def load(event):
     try:
         try:
             remove_plugin(shortname)
-        except:
+        except BaseException:
             pass
         load_module(shortname)
-        await event.edit(f"Successfully loaded {shortname}This Plugin Master")
+        qwe = await eor(event, f"Successfully loaded {shortname}")
     except Exception as e:
-        await event.edit(f"Could not load {shortname} because of the following error. Master\n{str(e)}")
+        await qwe.edit(
+            f"Master I could not load {shortname} because of the following error.\n{str(e)}"
+        )
