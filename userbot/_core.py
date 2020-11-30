@@ -1,3 +1,4 @@
+# Thanks To  @The_Siddharth_Nigam Who Told This Future 🔮 Thanks 
 from userbot import bot
 from telethon import events
 from userbot.utils import command, remove_plugin, load_module
