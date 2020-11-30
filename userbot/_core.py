@@ -14,7 +14,7 @@ import userbot.utils
 from datetime import datetime
 
 DELETE_TIMEOUT = 8
-thumb_image_path = "./Resources/1207066133.png"
+thumb_image_path = "./resources/1207066133.png"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodhackerzUserbot"
 
 @command(pattern="^.load", outgoing=True)
