@@ -56,7 +56,7 @@ async def install(event):
 async def send(event):
     if event.fwd_from:
         return
-    hmm = bot.uid
+    sob = bot.uid
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
@@ -75,12 +75,12 @@ async def send(event):
         time_taken_in_ms = (end - start).seconds
         await eor(
             pro,
-            f"**==> Plugin name:** `{input_str}`\n**==> Uploaded in {time_taken_in_ms} seconds only.**\n**==> Uploaded by:** [{DEFAULTUSER}](tg://user?id={hmm})\n",
+            f"**>>> Plugin name:** `{input_str}`\n**>>>Uploaded in {time_taken_in_ms} seconds only.**\n**>>> Uploaded by:** [{DEFAULTUSER}](tg://user?id={sob})\n**© @Godhackerzuserbot**\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
         await event.delete()
     else:
-        await eor(event, "**404**: __File Not Found__")
+        await eor(event, "**Error 404**: :( File Not Found :(")
 
 
 @command(pattern="^.remove (?P<shortname>\w+)$", outgoing=True)
