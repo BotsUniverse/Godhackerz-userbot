@@ -60,6 +60,9 @@ if ENV:
         GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
         NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
         # define "spam" in PMs
+        # heroku 
+        HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None) 
+        HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
         NO_SONGS = bool(os.environ.get("NO_SONGS", False))
         MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
         # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID
