@@ -18,6 +18,11 @@ from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
 
+if Config.SUDO_USERS:
+    sudo = "Enabled"
+else:
+    sudo = "Disabled"
+
 edit_time = 5
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/2c2b7a903649303a22010.jpg"
@@ -34,7 +39,7 @@ pm_caption += "😎Telethon Version : (1.16.04)\n"
 pm_caption += "🥳Python : (3.8.3)\n"
 pm_caption += "😮Version : (1.0)\n"
 pm_caption += "🥱A.I Verision : Beta **1.0.01** [Ask Support Group Master](t.me/Godhackerzuserbot)\n"
-pm_caption += "😱Sudo : (enabled For Master)\n"
+pm_caption += "😱Sudo : **{sudo}**\n"
 pm_caption += "🤫Database status : All Fine👌\n"
 pm_caption += f"🥰My Pro Master : {DEFAULTUSER}\n\n"
 pm_caption += "🤖[✅ Deploy Me Now ✅](https://github.com/rohithaditya/Godhackerz-userbot.git)\n\n"
@@ -68,3 +73,5 @@ async def amireallyalive(yes):
     
     await asyncio.sleep(edit_time)
     ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
+    
+   CMD_HELP.update({"alive": "➟ `.alive`\nUse - Check if your bot is working."})
