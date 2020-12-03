@@ -16,7 +16,7 @@ import os
 import heroku3
 import requests
 
-from userbot import CMD_HELP, 
+from userbot import CMD_HELP, COMMAND_HAND_LER 
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
