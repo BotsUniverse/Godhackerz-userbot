@@ -11,7 +11,7 @@ import sys
 import traceback
 
 from userbot import CMD_HELP
-
+from userbot.utils import admin_cmd
 
 @borg.on(admin_cmd(pattern="eval"))
 async def _(event):
@@ -72,6 +72,3 @@ async def _(event):
 async def aexec(code, event):
     exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
     return await locals()["__aexec"](event)
-
-
-CMD_HELP.update({"eval": ".eval <code>\nUse - Evalualte that code."})
