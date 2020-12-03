@@ -4,16 +4,16 @@ Syntax: .eval PythonCode"""
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-from telethon import events, errors, functions, types
-import inspect
-import traceback
-import asyncio
-import sys
+"""Evaluate Python Code inside Telegram
+Syntax: .eval PythonCode"""
 import io
-from uniborg.util import admin_cmd
+import sys
+import traceback
+
+from userbot import CMD_HELP
 
 
-@borg.on(admin_cmd("eval"))
+@borg.on(admin_cmd(pattern="eval"))
 async def _(event):
     if event.fwd_from:
         return
@@ -49,7 +49,9 @@ async def _(event):
     else:
         evaluation = "Success"
 
-    final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
+    final_output = "==>> **EVAL**\n`{}` \n\n ==>> **OUTPUT**: \n`{}` \n".format(
+        cmd, evaluation
+    )
 
     if len(final_output) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:
@@ -60,7 +62,7 @@ async def _(event):
                 force_document=True,
                 allow_cache=False,
                 caption=cmd,
-                reply_to=reply_to_id
+                reply_to=reply_to_id,
             )
             await event.delete()
     else:
@@ -68,8 +70,8 @@ async def _(event):
 
 
 async def aexec(code, event):
-    exec(
-        f'async def __aexec(event): ' +
-        ''.join(f'\n {l}' for l in code.split('\n'))
-    )
-    return await locals()['__aexec'](event)
+    exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
+    return await locals()["__aexec"](event)
+
+
+CMD_HELP.update({"eval": ".eval <code>\nUse - Evalualte that code."})
