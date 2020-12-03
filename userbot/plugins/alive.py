@@ -73,5 +73,3 @@ async def amireallyalive(yes):
     
     await asyncio.sleep(edit_time)
     ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
-    
-   CMD_HELP.update({"alive": "➟ `.alive`\nUse - Check if your bot is working."})
