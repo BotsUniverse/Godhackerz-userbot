@@ -2,7 +2,7 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.b (the "License");
 # you may not use this file except in compliance with the License.
-#
+# (C) @Godhackerzuserbot
 
 import asyncio
 from asyncio import wait
@@ -22,8 +22,8 @@ async def tmeme(e):
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
-        counter = int(message[6:8])
-        spam_message = str(e.text[8:])
+        counter = int(message[9:9])
+        spam_message = str(e.text[9:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
         if LOGGER:
