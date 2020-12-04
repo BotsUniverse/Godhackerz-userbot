@@ -13,13 +13,14 @@
 
 ### JOIN SUPPORT GROUP FOR HELP IN 24/7 
 <a href="https://t.me/Godhackerzuserbot"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
+### ON YOUTUBE TUTORIAL
+<a href="https://www.youtube.com/watch?v=KMeJ2cGvlqc&feature=youtu.be"><img src="https://img.shields.io/badge/Youtube-How%20To%20Deploy%20-blue"></a>
 
 ### Host YOUR DREAM USERBOT  In Heroku
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rohithaditya/Godhackerz-userbot/tree/main)
 
 ## For Your STRING SESSION 
-[![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://GodHackerz-Userbot.rohithaditya.repl.run)
+[![Run on Repl.it](https://repl.it/badge/github/rohithaditya/Godhackerz-userbot)](https://repl.it/@rohithaditya/GODHACKERZUSERBOTSREPL#main.py)
 
 ## APP ID AND HASH 
 FOR THAT Go to [CLICK HERE FOR YOUR API ID AND HASH](https://my.telegram.org) Login WIth YOUR PHONE NUMBER AND GET YOUR API ID 
