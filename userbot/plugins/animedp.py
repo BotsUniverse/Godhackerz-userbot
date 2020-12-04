@@ -60,7 +60,7 @@ async def animepp():
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
-@borg.on(admin_cmd(pattern="animedp ?(.*)"))
+@borg.on(admin_cmd(pattern="setanimedp ?(.*)"))
 async def main(event):
 
     await event.edit(
