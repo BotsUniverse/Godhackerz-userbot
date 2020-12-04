@@ -1,7 +1,7 @@
 # GOD HACKERZ USERBOT 
    A powerful Userbot Made with Love from Team Godhackerz
 ## STATUS OF THIS BOTS 
-https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot?label=Forks&logoColor=Silver&style=social
+<img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot?label=Forks&logoColor=Silver&style=social" alt FORK STATUS
 <p align="center">
 <img src="https://telegra.ph/file/cffc1ef157c0a8b692924.jpg" alt="GodHackerz USERBOT">
 
