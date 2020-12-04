@@ -21,11 +21,12 @@ import requests
 from telethon.tl import functions
 
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 COLLECTION_STRING = [
                   "tron-background"
-				  "iron-man-jarvis-animated-wallpaper"
-				  "batcomputer-wallpaper"
+		  "iron-man-jarvis-animated-wallpaper"
+		  "batcomputer-wallpaper"
 ]
 # ----------------For @Godhackerzuserbot-------------------------------------------------------------------Wrote BY @Rohithaditya-----------------------------------------
 
