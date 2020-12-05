@@ -4,7 +4,6 @@ Click on API Development Tools
 Create a new application, by entering the required details
 For Godhackerzuserbot""")
 print("")
-
 APP_ID = int(input("Enter APP ID here: "))
 API_HASH = input("Enter API HASH here: ")
 
