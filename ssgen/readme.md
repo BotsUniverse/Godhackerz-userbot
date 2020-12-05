@@ -1,22 +1,14 @@
 ## USerbot componets Dont Touch If You Dont What it is The Spelling Of this Userbot language 
 """
-Main Componets Of This Bot 
+Main Componets Of This Bot
+
 So Don't Kang And Edit Anything 
-Pull Request = Not Accepted 
+
+## Pull Request = Not Accepted 
 """"
 ### Now Type This Command In Termux
 ```
-#!/bin/bash
-clear
-echo "
- #######  #######  #######		$     $	  #######   $$$$$$$		#    #	$$$$$$$   #########   ########
- #		  #		#  #	 #		$     $   #		#	$			#	#	$		  #	      #        #
- #	      #     #  #     #		$	  $   #		#	$			#  #	$		  #       #		 #
- #  ##### #		#  #     # 		$$$$$$$   #######	$			###		$$$$$$$   #	#######    #
- #		# #     #  #     #		$     $   #     #	$			#  #	$         #  #		 #
- ######## #######  #######		$     $   #     #	$$$$$$$		#   #	$$$$$$$   #    #     ##########
-"
-# Termux session string generator for TeleBot
+# Termux session string generator for GodHackerz Userbot
 echo Starting dependency installation in 5 seconds...
 sleep 5
 apt-get update
@@ -31,4 +23,4 @@ python setup.py
 To Download termux [CLICK HERE](https://play.google.com/store/apps/details?id=com.termux&hl=en_GB)
 
 ### CLICK BELOW IMAGE TO INSTALL IT 
-<a href="https://play.google.com/store/apps/details?id=com.termux&hl=en_GB"><img src="https://img.shields.io/badge/Termux-To%20Download%20Click%20this%20Image-blue"
+<a href="https://play.google.com/store/apps/details?id=com.termux&hl=en_GB"><img src="https://img.shields.io/badge/Termux-To%20Download%20Click%20this%20Image-blue"></a>
