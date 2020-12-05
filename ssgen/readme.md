@@ -1,11 +1,10 @@
-## USerbot componets Dont Touch If You Dont What it is The Spelling Of this Userbot language 
-"""
-Main Componets Of This Bot
+## UserBot Componets Don't Touch If You Dont What it is The Spelling Of this Userbot's language  ;(
 
+Main Componets Of This Bot
 So Don't Kang And Edit Anything 
 
 ## Pull Request = Not Accepted 
-""""
+Follow this
 ### Now Type This Command In Termux
 ```
 # Termux session string generator for GodHackerz Userbot
