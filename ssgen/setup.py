@@ -1,3 +1,10 @@
+# © @Godhackerzuserbot 
+# Dont Copy Without Credits 
+# Made By @Rohithaditya
+
+from telethon.sync import TelegramClient
+from telethon.sessions import StringSession
+
 print("""Please go-to my.telegram.org
 Login using your Telegram account
 Click on API Development Tools
