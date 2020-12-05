@@ -1,7 +1,3 @@
-# © @Godhackerzuserbot 
-# Dont Copy Without Credits 
-# Made By @Rohithaditya
-
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 
@@ -11,8 +7,8 @@ APP_ID = int(input("Enter APP ID here: "))
 API_HASH = input("Enter API HASH here: ")
 
 with TelegramClient(StringSession(), APP_ID, API_HASH) as client:
-    tele = client.send_message("me", client.session.save())
-   tele.reply(
+    bot = client.send_message("me", client.session.save())
+   bot.reply(
         "The above is the `STRING_SESSION` for your current session.\nJoin @Godhackerzuserbot For Support\n (c) ")
     print("")
     print("Below is the STRING_SESSION. You can also find it in your Telegram Saved Messages.")
