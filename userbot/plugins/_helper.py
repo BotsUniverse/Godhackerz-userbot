@@ -1,5 +1,7 @@
 from userbot import CMD_LIST
 import io
+uid = (await bot.get_me()).id
+
 @command(pattern="^.help ?(.*)")
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
