@@ -1,6 +1,6 @@
 from userbot import CMD_LIST
 import io
-uid = (await bot.get_me()).id
+
 
 @command(pattern="^.help ?(.*)")
 async def cmd_list(event):
