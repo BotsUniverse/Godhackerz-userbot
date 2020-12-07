@@ -22,7 +22,7 @@ async def cmd_list(event):
                         force_document=True,
                         allow_cache=False,
                         caption="**COMMANDS**",
-                        reply_to=reply_to_id
+                        reply_to=event.reply_to_msg_id
                     )
                     await event.delete()
             else:
