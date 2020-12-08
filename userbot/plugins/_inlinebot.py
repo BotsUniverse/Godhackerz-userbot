@@ -13,7 +13,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.me.uid and query.startswith("Userbot"):
+        if event.query.user_id == bot.me.id and query.startswith("Userbot"):
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
@@ -28,7 +28,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         data=re.compile(b"helpme_next\((.+?)\)")
     ))
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.me.uid:  # pylint:disable=E0602
+        if event.query.user_id == bot.me.id:  # pylint:disable=E0602
             current_page_number = int(
                 event.data_match.group(1).decode("UTF-8"))
             buttons = paginate_help(
@@ -44,7 +44,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         data=re.compile(b"helpme_prev\((.+?)\)")
     ))
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.me.uid:  # pylint:disable=E0602
+        if event.query.user_id == bot.me.id:  # pylint:disable=E0602
             current_page_number = int(
                 event.data_match.group(1).decode("UTF-8"))
             buttons = paginate_help(
