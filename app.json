@@ -87,7 +87,7 @@
       "value": ""
     },
      "TG_BOT_USER_NAME_BF_HER": {
-       "description": "NEEDED FOR INLINE BUTTONS JUST COPY `TG_BOT_NAME_OF_HER` To Work Dont Include `@`"
+       "description": "NEEDED FOR INLINE BUTTONS JUST COPY `TG_BOT_NAME_OF_HER` To Work Dont Include `@`",
        "value": ""
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
