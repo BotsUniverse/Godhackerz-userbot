@@ -33,11 +33,11 @@ BOT_IS_UP_TO_DATE = "`The userbot is up-to-date.\nThank you for Using this Servi
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating ..."
+    "updating Now ❤❤"
 )
 NEW_UP_DATE_FOUND = (
     "New update found for {branch_name}\n"
-    "`updating ...`"
+    "`updating Now ❤❤`"
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "main"
@@ -84,7 +84,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("`Updating...`")
+        await message.edit("`Updating Now Master 💯💯`")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
