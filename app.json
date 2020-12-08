@@ -86,6 +86,10 @@
       "description": "You Telegram Bot's USERNAME Here. Needed For Help Module And Cbutton. REMEMBER TYPE USERNAME WITHOUT@",
       "value": ""
     },
+     "TG_BOT_USER_NAME_BF_HER": {
+       "description": "NEEDED FOR INLINE BUTTONS JUST COPY `TG_BOT_NAME_OF_HER` To Work Dont Include `@`"
+       "value": ""
+    },
     "DOWNLOAD_PFP_URL_CLOCK": {
       "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
       "value": "",
