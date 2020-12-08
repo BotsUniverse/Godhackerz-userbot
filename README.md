@@ -73,3 +73,15 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
     - `APP_ID`:   You can get this value from https://my.telegram.org
     - `API_HASH`:   You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
+
+## Warning ⚠ Read This 
+```
+        Using the bot for Improper use may lead to ban.
+    	I am not responsible if you misuse this bot.
+	This bot is just for managing groups more effectively and having some fun
+	with your telegram account.
+	No one is responsible for your actions.
+	If you spammed and got reported again and again, 
+	and, at last got your account banned, and you
+	point your fingers at me, I'll be rolling on the floor laughing at you And Will Never Care At All
+```
