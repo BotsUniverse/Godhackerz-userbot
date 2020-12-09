@@ -1,16 +1,28 @@
-from userbot import CMD_LIST
-import io
+  
+from telethon import functions
+
+from userbot import ALIVE_NAME, CMD_LIST
+from userbot.utils import admin_cmd
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "godhacker"
 
 
 @command(pattern="^.help ?(.*)")
 async def cmd_list(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+    if not event.text[0].isalpha() and event.text[0] not in (
+        "/",
+        "#",
+        "@",
+        "!",
+        "-",
+        "_",
+    ):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
         input_str = event.pattern_match.group(1)
         if tgbotusername is None or input_str == "text":
             string = ""
             for i in CMD_LIST:
-                string += "ℹ️ " + i + "\n"
+                string += "⚡️" + i + "\n"
                 for iter_list in CMD_LIST[i]:
                     string += "    `" + str(iter_list) + "`"
                     string += "\n"
@@ -24,7 +36,7 @@ async def cmd_list(event):
                         force_document=True,
                         allow_cache=False,
                         caption="**COMMANDS**",
-                        reply_to=event.reply_to_msg_id
+                        reply_to=reply_to_id,
                     )
                     await event.delete()
             else:
@@ -39,15 +51,13 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = """Userbot Helper.. \nProvided by @Godhackerzuserbot\n
-`Userbot Helper to reveal all the commands`"""
-            results = await bot.inline_query(  # pylint:disable=E0602
-                tgbotusername,
-                help_string
+            help_string = f"""Userbot Helper.. Provided by {DEFAULTUSER} \n
+`Userbot Helper to reveal all the commands`\n__Do .help plugin_name for commands"""
+            results = await bot.inline_query(  
+                tgbotusername, help_string
             )
             await results[0].click(
-                event.chat_id,
-                reply_to=event.reply_to_msg_id,
-                hide_via=True
+                event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
+
