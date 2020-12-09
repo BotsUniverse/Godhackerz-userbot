@@ -18,8 +18,8 @@ from .. import ALIVE_NAME, CMD_HELP
 from ..utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
-DEFAULTUSERBIO = "404: No bio found!˙"
-if Config.PRIVATE_GROUP_BOT_API_ID is None:
+DEFAULTUSERBIO = "Pm Protection By Godhackerz Userbot service = Spam = die"
+if Config. PRIVATE_CHANNEL_BOT_API_ID is None:
     BOTLOG = False
 else:
     BOTLOG = True
@@ -143,14 +143,3 @@ async def get_full_user(event):
         return replied_user, None
     except Exception as e:
         return None, e
-
-
-CMD_HELP.update(
-    {
-        "clone": ".clone <reply to user who you want to clone.\
-    \n**Use - clone the replied user account.\
-    \n\n.revert\
-    \nUse - Reverts back to your profile which you have set in heroku.\
-    "
-    }
-)
