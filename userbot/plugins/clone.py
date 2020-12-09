@@ -19,12 +19,11 @@ from ..utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GodHackerz User"
 DEFAULTUSERBIO = "Pm Protection By Godhackerz Userbot service = Spam = die"
-if Config. PRIVATE_CHANNEL_BOT_API_ID is None:
+if Config.PRIVATE_CHANNEL_BOT_API_ID is None:
     BOTLOG = False
 else:
     BOTLOG = True
-    BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
-
+    BOTLOG_CHATID = Config.PRIVATE_CHANNEL_BOT_API_ID 
 
 @borg.on(admin_cmd(pattern="copy ?(.*)"))
 async def _(event):
