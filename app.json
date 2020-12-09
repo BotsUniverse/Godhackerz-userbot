@@ -51,6 +51,10 @@
        "description": "Just Copy Paste PRIVATE_GROUP_ID FOR AFK PLUGIN", 
        "value": ""
      }, 
+     "PRIVATE_GROUP_BOT_API_ID": { 	
+       "description": "SORRY COPY THE ABOVE GROUP'S ID",
+       "value": ""
+     },
     "STRING_SESSION": {
       "description": "Get From Repl.run Or Run Locally or https://Godhackerz-userbot.rohithaditya.repl.run", 
       "value": ""
