@@ -41,7 +41,7 @@ class Var(object):
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_BOT_API_ID )
         expect valueError:
             raise ValueError("Invalid Private Group ID. Make sure your ID is starts with -100 and make sure that it is only numbers.")            
-            
+           
 class Development(Var):
     LOGGER = True
     # Here for later purposes
