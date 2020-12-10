@@ -4,6 +4,8 @@
 <a href="https://github.com/rohithaditya/Godhackerz-userbot/network/members"><img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot?label=Forks&logoColor=Silver&style=social"></a>
 <a href="https://github.com/rohithaditya/Godhackerz-userbot/stargazers"><img src="https://img.shields.io/github/stars/rohithaditya/Godhackerz-userbot?logoColor=Blue&style=social"></a>
 
+<a href="https://github.com/rohithaditya/Godhackerzuserbot"><img src="https://img.shields.io/github/last-commit/xditya/TeleBot?style=plactic"></a>
+
 <p align="center">
 <img src="https://telegra.ph/file/cffc1ef157c0a8b692924.jpg" alt="GodHackerz USERBOT">
 
