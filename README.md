@@ -1,9 +1,9 @@
 # GOD HACKERZ USERBOT 
    A powerful Userbot Made with Love from Team Godhackerz
 ## STATUS OF THIS BOTS 
-<p align="center"><a href="https://github.com/rohithaditya/Godhackerz-userbot/network/members"><img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot?label=Forks&logoColor=Silver&style=social"></a>
-<p align="center"><a href="https://github.com/rohithaditya/Godhackerz-userbot/stargazers"><img src="https://img.shields.io/github/stars/rohithaditya/Godhackerz-userbot?logoColor=Blue&style=social"></a>
- <p align="center"><a href="https://github.com/rohithaditya/Godhackerz-userbot"><img src="https://github-readme-stats.vercel.app/api/pin?username=rohithaditya&show_icons=true&theme=light&hide_border=true&repo=Godhackerz-userbot"></a>
+<p align="left"><a href="https://github.com/rohithaditya/Godhackerz-userbot/network/members"><img src="https://img.shields.io/github/forks/rohithaditya/Godhackerz-userbot?label=Forks&logoColor=Silver&style=social"></a>
+<p align="left"><a href="https://github.com/rohithaditya/Godhackerz-userbot/stargazers"><img src="https://img.shields.io/github/stars/rohithaditya/Godhackerz-userbot?logoColor=Blue&style=social"></a>
+ <p align="center"><a href="https://github.com/rohithaditya/Godhackerz-userbot"><img src="https://github-readme-stats.vercel.app/api/pin?username=rohithaditya&show_icons=true&theme=Green&hide_border=true&repo=Godhackerz-userbot"></a>
 	
 <p align="center"><a href="https://github.com/rohithaditya/Godhackerz-userbot"><img src="https://img.shields.io/github/last-commit/rohithaditya/Godhackerz-userbot?style=plastic"></a>
 
