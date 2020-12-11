@@ -5,10 +5,8 @@
 
 <p align="center">
 <img src="https://telegra.ph/file/cffc1ef157c0a8b692924.jpg" alt="GodHackerz USERBOT">
-
-
-<p align="center"> 
-(C) By Team #GodHackerz
+   
+## (C) By Team #GodHackerz
 
 ### JOIN SUPPORT GROUP FOR HELP IN 24/7 
 <a href="https://t.me/Godhackerzuserbot"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
