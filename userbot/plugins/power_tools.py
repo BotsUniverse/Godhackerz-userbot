@@ -49,26 +49,22 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
-
-
-
-
 # RESTART CMD
 @borg.on(admin_cmd("restart"))
 async def _(event):
     if event.fwd_from:
         return
-     #await asyncio.sleep(3)
-     #await event.edit("Restarting [██░] ...\n`.ping` or `.help` to check if I am online Master")
-     #await asyncio.sleep(4)
-     #await event.edit("Restarting [███]...\n`.ping`  or `.help` to check if I am online Master")
-     #await asyncio.sleep(5)
-     await event.edit("Restarted. `.alive` me or `.help` to check if I am online Master")
-     await borg.disconnect()
-     # https://archive.is/im3rt
-     os.execl(sys.executable, sys.executable, *sys.argv)
-     # You probably don't need it but whatever
-     quit()
+    # await asyncio.sleep(2)
+    # await event.edit("Restarting [██░] ...\n`.ping` me or `.helpme` to check if I am online")
+    # await asyncio.sleep(2)
+    # await event.edit("Restarting [███]...\n`.ping` me or `.helpme` to check if I am online")
+    # await asyncio.sleep(2)
+    await event.edit("Restarted. `.ping` me or `.helpme` to check if I am online")
+    await borg.disconnect()
+    # https://archive.is/im3rt
+    os.execl(sys.executable, sys.executable, *sys.argv)
+    # You probably don't need it but whatever
+    quit()
 
 # SWITCHOFF CMD
 @borg.on(admin_cmd("shutdown"))
