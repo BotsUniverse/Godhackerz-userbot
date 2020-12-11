@@ -58,11 +58,11 @@ def get_readable_time(seconds: int) -> str:
 async def _(event):
     if event.fwd_from:
         return
-     await asyncio.sleep(3)
+     #await asyncio.sleep(3)
      await event.edit("Restarting [██░] ...\n`.ping` or `.help` to check if I am online Master")
-     await asyncio.sleep(4)
+     #await asyncio.sleep(4)
      await event.edit("Restarting [███]...\n`.ping`  or `.help` to check if I am online Master")
-     await asyncio.sleep(5)
+     #await asyncio.sleep(5)
      await event.edit("Restarted. `.alive` me or `.help` to check if I am online Master")
      await borg.disconnect()
      # https://archive.is/im3rt
