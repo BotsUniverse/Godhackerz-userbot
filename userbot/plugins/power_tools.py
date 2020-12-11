@@ -74,15 +74,3 @@ async def _(event):
     await event.edit("😩😩😩😩😩Master U Switched Off Me Master 😞😞/n..Manually turn me on later On My Mother(I Mean Heroku)😑")
     await borg.disconnect()
     
-# CPU CMD 
-@borg.on(admin_cmd(pattern="cpu"))
-async def _(event):
-      ubizbest = await edit_or_reply(event, "`<^^^^^>`")
-    if event.fwd_from:
-        return
-    start = datetime.now()
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    uptime = get_readable_time((time.time() - Lastupdate))
-    await ubizbest.edit(f" HELLO MASTER!!! /n ➲ Average System Speed Is `{ms}` \n ➲ Using ME Is `{uptime}`/n DB SERVER IS HEROKU")
-
