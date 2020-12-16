@@ -10,7 +10,7 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
-from userbot.util import ALIVENAME
+from userbot.utils import ALIVENAME
 
 
 DEFAULTUSER = str(ALIVENAME) if AUTONAME else "GODHACKERZUSERBot"
