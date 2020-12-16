@@ -10,10 +10,10 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
-from userbot import AUTONAME
+from userbot.util import ALIVENAME
 
 
-DEFAULTUSER = str(AUTONAME) if AUTONAME else "GujjuBot"
+DEFAULTUSER = str(ALIVENAME) if AUTONAME else "GODHACKERZUSERBot"
 
 @borg.on(admin_cmd(pattern=r"deploy"))
 
@@ -35,7 +35,7 @@ async def _(event):
 
     animation_chars = [
         
-            "**Heroku Connecting To Latest Github Build (GujjuBot)**",
+            "**Heroku Connecting To Latest Github Build (GODHACKERZUSERBOTBot)**",
             "**Build started by user** **{DEFAULTUSER}**",
             "**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
             "**Restarting Heroku Server...**",
