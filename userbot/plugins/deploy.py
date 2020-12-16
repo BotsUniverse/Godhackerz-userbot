@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
 
 
-DEFAULTUSER = str(ALIVENAME) if ALIVENAMR else "GODHACKERZUSERBot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVENAME else "GODHACKERZUSERBot"
 
 @borg.on(admin_cmd(pattern=r"deploy"))
 
