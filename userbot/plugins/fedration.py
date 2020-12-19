@@ -14,7 +14,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import  UpdateNotifySettingsRequest
 from uniborg.util  import admin_cmd 
 
-@borg.on(admin_cmd(pattern=”fstat ?(.*)”))
+@borg.on(admin_cmd(pattern=r"\.fstat ?(.*)"
 async def _(event):
 	if event.fwd_from:
 		return
@@ -34,7 +34,7 @@ async def _(event):
 		      await event.reply(“So Dumb!!!! I Cant Check Beacause You Had Blocked `@MissRose_bot` So Unblock And Try Again If Any Error Then [Head To Support Group Master](t.me/Godhackerzuserbot)”)
 		      await event.client.send_message(event.chat_id, response.message)
 # --------------- For @Godhackerzuserbot ---------------- Wrote By @Rohithaditya ---------------------&
-@borg.on(admin_cmd(pattern=”fedinfo ?(.*)”))
+@borg.on(admin_cmd(pattern=r"\.fedinfo ?(.*)"
 async def _(event):
 	if event.fwd_from:
 		return
@@ -56,7 +56,7 @@ async def _(event):
 
 # ------------------------------------ For @Godhackerzuserbot------------------------------- Wrote By @Rohithaditya --------------
 
-@borg.on(admin_cmd(pattern=”myfeds ?(.*)”))
+@borg.on(admin_cmd(pattern=r"\.myfeds ?(.*)"
 async def _(event):
 	if event.fwd_from:
 		return
