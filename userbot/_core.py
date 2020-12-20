@@ -60,7 +60,7 @@ async def send(event):
     sob = bot.uid
     message_id = event.message.id
     thumb = thumb_image_path
-    input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match["shortname"]
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         start = datetime.now()
