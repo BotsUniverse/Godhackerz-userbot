@@ -204,7 +204,7 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     return indentitems(items, indent, level=0)
 
 
-@borg.on(admin_cmd(pattern="logs$", outgoing=True))
+@borg.on(admin_cmd(outgoing=True, pattern=r"logs"))
 async def _(givelogs):
     try:
         Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
