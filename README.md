@@ -1,3 +1,5 @@
+## Kind Notice
+<h1> THis Project Is closed now <h1>
 # GOD HACKERZ USERBOT 
    A powerful Userbot Made with Love from Team Godhackerz
 ## STATUS OF THIS BOTS 
